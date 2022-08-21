@@ -17,7 +17,7 @@ export class ContactMeInitComponent implements OnInit {
     messageContact: 'Mensagem',
   };
 
-  labelMap = 'Criando linhas de código em São Paulo 🌆';
+  labelMap = 'Criando linhas de código em São Paulo!';
   contactMe = 'Hey, Mande uma mensagem!';
   btnSendMessage = 'Enviar Mensagem';
   headerContact = 'Parcerias';
