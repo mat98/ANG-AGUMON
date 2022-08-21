@@ -1,15 +1,75 @@
 <div class="main">
-    <h2>Animais</h2>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsam tempora sed sequi placeat at dolore ipsa voluptas corrupti quos voluptates reprehenderit iste iusto, saepe porro aut quibusdam nulla pariatur.
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam reprehenderit quae alias pariatur quam laboriosam quis consequatur sapiente cumque harum vel recusandae dolor quaerat ipsam tenetur, maxime tempora! Numquam, nisi.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsam tempora sed sequi placeat at dolore ipsa voluptas corrupti quos voluptates reprehenderit iste iusto, saepe porro aut quibusdam nulla pariatur.
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam reprehenderit quae alias pariatur quam laboriosam quis consequatur sapiente cumque harum vel recusandae dolor quaerat ipsam tenetur, maxime tempora! Numquam, nisi.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsam tempora sed sequi placeat at dolore ipsa voluptas corrupti quos voluptates reprehenderit iste iusto, saepe porro aut quibusdam nulla pariatur.
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam reprehenderit quae alias pariatur quam laboriosam quis consequatur sapiente cumque harum vel recusandae dolor quaerat ipsam tenetur, maxime tempora! Numquam, nisi.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsam tempora sed sequi placeat at dolore ipsa voluptas corrupti quos voluptates reprehenderit iste iusto, saepe porro aut quibusdam nulla pariatur.
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam reprehenderit quae alias pariatur quam laboriosam quis consequatur sapiente cumque harum vel recusandae dolor quaerat ipsam tenetur, maxime tempora! Numquam, nisi.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsam tempora sed sequi placeat at dolore ipsa voluptas corrupti quos voluptates reprehenderit iste iusto, saepe porro aut quibusdam nulla pariatur.
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam reprehenderit quae alias pariatur quam laboriosam quis consequatur sapiente cumque harum vel recusandae dolor quaerat ipsam tenetur, maxime tempora! Numquam, nisi.
-    <var><var>    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsam tempora sed sequi placeat at dolore ipsa voluptas corrupti quos voluptates reprehenderit iste iusto, saepe porro aut quibusdam nulla pariatur.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam reprehenderit quae alias pariatur quam laboriosam quis consequatur sapiente cumque harum vel recusandae dolor quaerat ipsam tenetur, maxime tempora! Numquam, nisi.</var></var>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20">
+    <div class="container-space">
+      <form>
+        <div [formGroup]="form">
+          <div class="row mb20">
+            <span class="title-span">{{ contactMe }}</span>
+          </div>
+
+          <div class="form-row">
+            <div class="mb10">
+              <mat-label>{{ formDescription.name }}: </mat-label>
+              <input
+                type="text"
+                formControlName="name"
+                matInput
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <div class="mb10">
+              <mat-label>{{ formDescription.emailAddress }}: </mat-label>
+              <input
+                type="text"
+                formControlName="name"
+                matInput
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <div class="mb10">
+              <mat-label>{{ formDescription.subjectContact }}: </mat-label>
+              <input
+                type="text"
+                formControlName="name"
+                matInput
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <div class="mb10">
+              <mat-label>{{ formDescription.messageContact }}: </mat-label>
+              <textarea class="form-control" rows="6" style="resize: none">
+              </textarea>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="end end">
+              <button
+                type="button"
+                class="btn fixed-bottom mb10"
+                mat-raised-button
+                color="primary"
+              >
+                {{ btnSendMessage }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div
+      class="container-space"
+      fxLayout="column"
+    >
+      <div class="row">
+        <span class="title-span">{{ labelMap }}</span>
+      </div>
+      <div class="row mt10">
+        <app-map></app-map>
+      </div>
+    </div>
+  </div>
 </div>

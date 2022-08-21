@@ -8,7 +8,7 @@ const routes: Routes = [
     component: AuthenticatedLayoutComponent,
     children: [
       {
-        path: '',
+        path: 'teste',
         canActivate: [],
         loadChildren: () =>
           import('./pages/contact-me/contact-me.module').then(
