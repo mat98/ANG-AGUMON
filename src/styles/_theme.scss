@@ -1,0 +1,67 @@
+// ? Importing `Work Sans` font for headings, you can change this if you want
+@import "./fonts";
+
+$mat-wallet-primary: (
+    50 : #feede1,
+    100 : #fdd2b3,
+    200 : #fcb480,
+    300 : #fb964d,
+    400 : #fa8027,
+    500 : #1fb8ab,
+    600 : #f86101,
+    700 : #f75601,
+    800 : #f64c01,
+    900 : #f53b00,
+    A100 : #ffffff,
+    A200 : #ffece8,
+    A400 : #ffc2b5,
+    A700 : #ffad9c,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// ? 1. Default theme
+$theming-material-components-primary: mat-palette($mat-wallet-primary);
+$theming-material-components-accent: mat-palette($mat-pink, A200, A100, A400);
+$theming-material-components-warn: mat-palette($mat-red);
+
+$theming-material-components-theme: mat-light-theme(
+    $theming-material-components-primary,
+    $theming-material-components-accent,
+    $theming-material-components-warn
+);
+
+$primary: map-get($theming-material-components-theme, primary);
+$accent: map-get($theming-material-components-theme, accent);
+$warn: map-get($theming-material-components-theme, warn);
+
+:root {
+  --color-primary: #{mat-color($primary)};
+  --color-primary-lighter: #{mat-color($primary, lighter)};
+  --color-primary-darker: #{mat-color($primary, darker)};
+  --color-accent: #{mat-color($accent)};
+  --color-warn: #{mat-color($warn)};
+}
+
+
+// ? 3. Define a custom heading typography config
+$typography: mat-typography-config(
+    $font-family: "poppinsRegular"
+);
+
+@mixin custom-components-theme($theme) {
+}

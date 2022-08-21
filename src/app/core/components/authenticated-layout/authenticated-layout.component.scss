@@ -1,0 +1,96 @@
+.container {
+  padding: 0 20px 0 20px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.username {
+  font-size: 15px;
+  margin-right: 10px;
+
+  @media screen and (max-width: 500px) {
+      display:none !important;
+  }
+}
+
+.icon {
+  color: var(--color-primary);
+}
+
+img {
+  width: 5%;
+  height: auto;
+}
+
+mat-sidenav {
+  position: fixed;
+  margin-top: 64px;
+  height: 100%;
+  min-height: 100%;
+
+  @media screen and (max-width: 600px) {
+      margin-top: 54px;
+  }
+}
+
+.menu-item {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &.active .menu-item-box {
+      border-radius: 5px;
+      box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(244 67 54 / 40%);
+      width: 100%;
+      padding: 10px;
+      background-color: var(--color-primary);
+      color: #fff;
+      font-family: poppinsMedium;
+
+      fa-icon {
+          margin-right: 15px;
+          color: #fff;
+          font-size: 20px;
+      }
+
+      &:hover {
+          background-color: var(--color-primary);
+      }
+  }
+
+  .menu-item-box {
+      width: 100%;
+      padding: 10px;
+      color: #3c4858;
+
+      fa-icon {
+          margin-right: 15px;
+          color: #3c4858;
+          font-size: 18px;
+      }
+
+      &:hover {
+          background-color: #f5f5f5;
+      }
+  }
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.logo {
+  margin: 0px 10px;
+  text-align: center;
+  border-bottom: 1px solid #DBDBDB;
+  
+  img {
+      width: 200px;
+  }
+}

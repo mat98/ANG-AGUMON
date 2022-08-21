@@ -1,0 +1,29 @@
+$theme-colors: (
+    "heiferColor": #f06292,
+    "calfColor": #64b5f6,
+    "garrotColor": #2196f3,
+    "steerColor": #e91e63,
+    "emptyCowColor": #c2185b,
+    "pregnantCowColor": #ad1457,
+    "oxColor": #1976d2,
+    "bullColor": #0d47a1,
+);
+
+$prefix: "--"; // Prefix string for custom CSS properties
+
+// Merges a variable name with $prefix
+@function custom-property-name($name) {
+    @return $prefix + $name;
+}
+
+// Defines a custom property
+@mixin define-custom-property($name, $value) {
+    #{custom-property-name($name)}: $value;
+}
+
+body {
+    // Append SASS variables which are desired to be accesible:
+    @each $color, $value in $theme-colors {
+        @include define-custom-property($color, $value);
+    }
+}

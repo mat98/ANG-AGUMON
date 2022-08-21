@@ -1,0 +1,60 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-icon *ngIf="username" style="margin-right: 10px; cursor: pointer"
+      >menu</mat-icon
+    >
+
+    <span (click)="navigateTo('home'); sidenav.close()" style="cursor: pointer">
+    </span>
+
+    <span class="example-spacer"></span>
+
+    <span
+      *ngIf="username"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      class="username"
+    >
+      <mat-icon class="mr10">person</mat-icon>
+      {{ username }}
+    </span>
+  </mat-toolbar>
+  <mat-sidenav-container
+    fxFlexFill
+    class="example-container"
+    [ngStyle]="{ position: sidenav.opened ? 'fixed' : 'relative' }"
+  >
+    <mat-sidenav
+      [autoFocus]="false"
+      #sidenav
+      fxLayout="column"
+      style="width: 250px"
+    >
+      <div fxLayout="column">
+        <!-- <div class="logo">
+        <img src="assets/img/artboard_2.svg">
+      </div> -->
+        <span class="mt10"></span>
+        <span
+          *ngFor="let r of routes"
+          fxLayout="row"
+          fxLayoutAlign="start center"
+          class="menu-item"
+          (click)="navigateTo(r.route); sidenav.close()"
+          [ngClass]="{ active: activeRoute === r.route }"
+        >
+          <div
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            class="menu-item-box"
+          >
+            <span>{{ r.description }}</span>
+          </div>
+        </span>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
