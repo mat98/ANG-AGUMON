@@ -8,6 +8,11 @@ const routes: Routes = [
     component: AuthenticatedLayoutComponent,
     children: [
       {
+        path: '',
+        canActivate: [],
+        loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule)
+      },
+      {
         path: 'teste',
         canActivate: [],
         loadChildren: () =>
@@ -17,10 +22,11 @@ const routes: Routes = [
       },
     ],
   },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

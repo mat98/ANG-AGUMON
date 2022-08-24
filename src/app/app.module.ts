@@ -13,9 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AuthenticatedLayoutComponent
   ],
   imports: [
+    BrowserModule,
     CoreModule,
     BrowserAnimationsModule,
-    BrowserModule,
     AppRoutingModule
   ],
   providers: [],

@@ -1,0 +1,15 @@
+<div class="main">
+    <div fxLayoutGap="20" fxLayout="row" fxLayout.xs="row" class="mb20">
+        <div *ngFor="let item of array" class="digiprojects" fxLayout="column" fxFlex="100">
+            <img src="https://www.pngmart.com/files/4/Digimon-PNG-Transparent-Image.png" alt="img" class="img mt10">
+            <span class="mb10">{{item.nameProject}}</span>
+        </div>
+    </div>
+
+    <div fxLayoutGap="20" fxLayout="row" fxLayout.xs="row" class="mb20">
+        <div *ngFor="let item of array" class="digiprojects" fxLayout="column">
+            <img src="https://www.pngmart.com/files/4/Digimon-PNG-Transparent-Image.png" alt="img" class="img mt10">
+            <span class="mb10">{{item.nameProject}}</span>
+        </div>
+    </div>
+</div>

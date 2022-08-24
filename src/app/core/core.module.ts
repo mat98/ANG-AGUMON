@@ -1,11 +1,11 @@
-import { DatePipe } from "@angular/common"
+import { DatePipe, CommonModule } from "@angular/common"
 import { NgModule } from "@angular/core"
 import { MaterialModule } from "./material/material.module"
-import { FormsModule } from "@angular/forms"
-import { ReactiveFormsModule } from "@angular/forms"
+import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { FlexLayoutModule } from "@angular/flex-layout"
 
 const MODULES = [
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
@@ -18,17 +18,17 @@ const PIPES: any = [
 
 @NgModule({
     declarations: [
-
+        PIPES
     ],
     imports: [
         MODULES
     ],
     exports: [
-        MODULES
+        MODULES, PIPES
     ],
     providers: [
         DatePipe
     ]
 })
 
-export class CoreModule {}
+export class CoreModule { }
