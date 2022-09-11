@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-home-init',
@@ -9,27 +10,27 @@ import { Component, OnInit } from "@angular/core";
 export class HomeInitComponent implements OnInit {
     public array: any = [
         {
-            nameProject: 'Teste 1'
+            nameProject: 'Chapmon',
+            routeDetail: 'chapmon',
+            img: 'https://raw.githubusercontent.com/mat98/VUEJS-CHAPMON/main/Chapmon.png',
+            description: "Projeto criado para simular compra e venda de ações"
         },
         {
-            nameProject: 'Teste 1'
-        },
-        {
-            nameProject: 'Teste 1'
-        },
-        {
-            nameProject: 'Teste 1'
-        },
-        {
-            nameProject: 'Teste 1'
+            nameProject: 'Greymon',
+            routeDetail: 'greymon',
+            img: 'http://assets.stickpng.com/thumbs/5c97c1ba87b24c0257899480.png',
+            description: "Projeto criado para simular compra e venda de ações"
         }
     ];
 
-    constructor() {
-
-    }
+    constructor(private _router: Router) {}
 
     ngOnInit(): void {
 
+    }
+
+    navigateToDetail(routeLink: string) {
+        console.log(routeLink)
+        this._router.navigate([`detail-project/${routeLink}`]);
     }
 }

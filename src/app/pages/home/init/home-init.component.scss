@@ -2,6 +2,25 @@
     margin: 0;
     font-family: poppinsMedium;
     padding: 20px;
+
+    h2 {
+        font-size: 3.2em;
+        color: #0C0B0B;
+        @media (min-width:1025px) {
+            font-size: 6em;
+            color: #0C0B0B;
+        }
+    }
+
+    span {
+        font-size: 1.2em;
+        color: #54544E;
+    }
+}
+
+.items_page {
+    justify-content: center;
+    display: flex;
 }
 
 .teste {
@@ -13,9 +32,85 @@
     width: 100px;
 }
 
-.digiprojects {
+.mobileprojects {
     align-items: center;
     background-color: #008080;
-    border-radius: 30px;
     cursor: pointer;
+}
+
+.webmonsprojects {
+    align-items: center;
+    background-color: #19437D;
+    cursor: pointer;
+}
+
+.backendmonsprojects {
+    align-items: center;
+    background-color: #E95420;
+    cursor: pointer;
+}
+
+.flip {
+    position: relative;
+    >.front,
+    >.back {
+        display: block;
+        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+        transition-duration: .5s;
+        transition-property: transform, opacity;
+    }
+    >.front {
+        transform: rotateY(0deg);
+    }
+    >.back {
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        left: 0px;
+        width: 60%;
+        height: 80%;
+        transform: rotateY(-180deg);
+    }
+    &:hover {
+        >.front {
+            transform: rotateY(180deg);
+        }
+        >.back {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+    &.flip-vertical {
+        >.back {
+            transform: rotateX(-180deg);
+        }
+        &:hover {
+            >.front {
+                transform: rotateX(180deg);
+            }
+            >.back {
+                transform: rotateX(0deg);
+            }
+        }
+    }
+}
+
+// custom
+.flip {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 1em;
+    >.back {
+      display: block;
+      color: white;
+      width: inherit;
+      background-size: cover!important;
+      background-position: center!important;
+      padding: 1em 2em;
+      p {
+        font-size: 0.9125rem;
+        color: #999;
+      }
+    }
 }

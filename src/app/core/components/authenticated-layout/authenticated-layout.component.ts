@@ -32,11 +32,31 @@ export class AuthenticatedLayoutComponent {
   }
 
   private generateRoutes() {
-    const storageRoles = localStorage.getItem('roles');
+    // const storageRoles = localStorage.getItem('roles');
     this.routes = [
       { route: '/', icon: this.icons.faChartLine, description: 'app.home' },
+      // { route: '/farm/list', icon: this.icons.faMapSigns, description: 'app.farms' },
     ];
   }
+
+  // private generateRoutes() {
+  //   const storageRoles = localStorage.getItem('roles');
+  //   if (storageRoles) {
+  //     const userRoles: string[] = JSON.parse(storageRoles);
+  //     if (userRoles.includes('frigorifico')) {
+  //       this.routes = [];
+  //     } else {
+  //       this.routes = [
+  //         { route: '/', icon: this.icons.faChartLine, description: 'app.home' },
+  //         { route: '/farm/list', icon: this.icons.faMapSigns, description: 'app.farms' },
+  //         { route: '/herd/list', icon: this.icons.faBuromobelexperte, description: 'app.herds' },
+  //         { route: '/animal/list', icon: this.icons.faVaadin, description: 'app.animals' },
+  //         { route: '/romaneio/list', icon: this.icons.faFileAlt, description: 'app.romaneio' },
+  //         { route: '/settings', icon: this.icons.faCog, description: 'app.settings' }
+  //       ];
+  //     }
+  //   }
+  // }
 
   public navigateTo(route: string): void {
     this.activeRoute = route;

@@ -20,6 +20,14 @@ const routes: Routes = [
             (m) => m.ContactMeModule
           ),
       },
+      {
+        path: 'detail-project',
+        canActivate: [],
+        loadChildren: () => 
+          import("./pages/detail-project/detail-project.module").then(
+            (m) => m.DetailProjectModule
+          )
+      }
     ],
   },
   { path: '**', redirectTo: '' }

@@ -1,8 +1,37 @@
 <div class="main">
-    <div fxLayoutGap="10" fxLayout="row wrap" fxLayout.xs="row wrap">
-        <div *ngFor="let item of array" class="digiprojects mb20" fxLayout="column" fxFlex="10" fxFlex.sm="30" fxFlex.xs="100">
-            <img src="http://assets.stickpng.com/thumbs/5c97c1ba87b24c0257899480.png" alt="img" class="img mt10">
-            <span class="mb10">{{item.nameProject}}</span>
+    <div fxLayout="column wrap" fxLayoutGap="20" class="items_page mt20">
+        <h2>Olá, meu nome é Mateus!</h2>
+        <br>
+        <div style="max-width: 70%">
+            <mat-divider></mat-divider>
+        </div>
+        <span>Segue abaixo a lista dos meus <strong>DigiProjects</strong> e acompanhe suas digievoluções 😀</span>
+
+        <span>MobileMons</span>
+        <div fxLayoutGap="10" fxLayout="row wrap" fxLayout.xs="row wrap">
+            <div *ngFor="let item of array; let i = index" class="mobileprojects flip mb20"  (click)="navigateToDetail(item.routeDetail)" fxLayout="column" fxFlex="10" fxFlex.sm="30" fxFlex.xs="40"> 
+                <div class="front" fxLayout="column">
+                    <img src="{{item.img}}" alt="img" class="img mt10">
+                    <span class="mb10 ml10" style="color: #F6F6F2;">{{item.nameProject}}</span>
+                </div>
+                <div class="back" style="background-color: #008080;">
+                   <span style="color: #F6F6F2; font-size: 87%;"> {{item.description}}</span>
+                </div>
+            </div>
+        </div>
+        <span>WebMons</span>
+        <div fxLayoutGap="10" fxLayout="row wrap" fxLayout.xs="row wrap">
+            <div *ngFor="let item of array" class="webmonsprojects mb20" fxLayout="column" fxFlex="10" fxFlex.sm="30" fxFlex.xs="30">
+                <img src="http://assets.stickpng.com/thumbs/5c97c1ba87b24c0257899480.png" alt="img" class="img mt10">
+                <span class="mb10" style="color: #F6F6F2;">{{item.nameProject}}</span>
+            </div>
+        </div>
+        <span>BackendMons</span>
+        <div fxLayoutGap="10" fxLayout="row wrap" fxLayout.xs="row wrap">
+            <div *ngFor="let item of array" class="backendmonsprojects mb20" fxLayout="column" fxFlex="10" fxFlex.sm="30" fxFlex.xs="30">
+                <img src="http://assets.stickpng.com/thumbs/5c97c1ba87b24c0257899480.png" alt="img" class="img mt10">
+                <span class="mb10" style="color: #F6F6F2;">{{item.nameProject}}</span>
+            </div>
         </div>
     </div>
 </div>
