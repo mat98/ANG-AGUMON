@@ -5,7 +5,7 @@ import {
   faCog,
   faMapSigns,
   faSignOutAlt,
-  faFileAlt,
+  faFileAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -32,7 +32,6 @@ export class AuthenticatedLayoutComponent {
   }
 
   private generateRoutes() {
-    // const storageRoles = localStorage.getItem('roles');
     this.routes = [
       { route: '/', icon: this.icons.faChartLine, description: 'app.home' },
       // { route: '/farm/list', icon: this.icons.faMapSigns, description: 'app.farms' },
@@ -61,5 +60,9 @@ export class AuthenticatedLayoutComponent {
   public navigateTo(route: string): void {
     this.activeRoute = route;
     this._router.navigate([route]);
+  }
+
+  public navigateToRedirectLinkExtern(link: string): void {
+    window.open(link, "_blank");
   }
 }
