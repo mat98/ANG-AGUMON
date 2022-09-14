@@ -1,0 +1,43 @@
+div {
+    background-color: #008080;
+    min-height: 15vh;
+
+    .title {
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 0.7em;
+        font-size: 4em;
+
+        @media (min-width:801px) {
+            font-size: 10em;
+        }
+    }
+
+    .ok {
+        padding-top: 7em;
+    }
+
+    img {
+        position: relative;
+        top: 5em;
+
+        @media (max-width:480px) {
+            width: 40%;
+            /* you can use % */
+            height: auto;
+        }
+
+        @media (max-width:801px) {
+            width: 30%;
+            /* you can use % */
+            height: auto;
+        }
+
+        @media (max-width:801px) {
+            width: 30%;
+            /* you can use % */
+            height: auto;
+        }
+    }
+}

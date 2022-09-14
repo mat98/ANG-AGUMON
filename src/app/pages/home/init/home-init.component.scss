@@ -40,8 +40,11 @@
 
 .webmonsprojects {
     align-items: center;
-    background-color: #19437D;
     cursor: pointer;
+}
+
+.webmonsprojects_style {
+    background-color: #19437D;
 }
 
 .backendmonsprojects {
@@ -49,6 +52,11 @@
     background-color: #E95420;
     cursor: pointer;
 }
+
+.backendmonsprojects_style {
+    background-color: #E95420;
+}
+
 
 .flip {
     position: relative;
