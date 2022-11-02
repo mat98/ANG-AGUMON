@@ -59,6 +59,10 @@
   margin-left: 15px !important;
 }
 
+.ml20 {
+  margin-left: 20px !important;
+}
+
 .pt0 {
   padding-top: 0 !important;
 }
@@ -139,4 +143,12 @@ mat-card {
 .dragDrop {
   width: 100%;
   min-width: 300px !important;
+}
+
+.material-icons.color_green {
+  color: #1fb8ab;
+}
+
+.material-icons.color_white {
+  color: #FFFFFF;
 }
