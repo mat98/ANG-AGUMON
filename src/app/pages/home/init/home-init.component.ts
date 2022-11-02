@@ -14,12 +14,6 @@ export class HomeInitComponent implements OnInit {
             routeDetail: 'chapmon',
             img: 'https://raw.githubusercontent.com/mat98/VUEJS-CHAPMON/main/Chapmon.png',
             description: "Projeto criado para simular compra e venda de ações"
-        },
-        {
-            nameProject: 'Greymon',
-            routeDetail: 'greymon',
-            img: 'http://assets.stickpng.com/thumbs/5c97c1ba87b24c0257899480.png',
-            description: "Projeto criado para simular compra e venda de ações"
         }
     ];
 

@@ -9,7 +9,7 @@ const MODULES = [
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
 ]
 
 const PIPES: any = [

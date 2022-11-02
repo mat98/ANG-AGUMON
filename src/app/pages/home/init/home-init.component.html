@@ -5,7 +5,7 @@
         <div style="max-width: 70%">
             <mat-divider></mat-divider>
         </div>
-        <span>| Segue abaixo a lista dos meus <strong>DigiProjects</strong> e acompanhe suas digievoluções 😀</span>
+        <span>Segue abaixo a lista dos meus <strong>DigiProjects</strong> e acompanhe suas digievoluções 😀</span>
 
         <span>MobileMons</span>
         <div fxLayoutGap="10" fxLayout="row wrap" fxLayout.xs="row wrap">
@@ -27,18 +27,6 @@
                     <span class="webmonsprojects mb10 ml10" style="color: #F6F6F2;">{{item.nameProject}}</span>
                 </div>
                 <div class="webmonsprojects_style back">
-                   <span style="color: #F6F6F2; font-size: 87%;"> {{item.description}}</span>
-                </div>
-            </div>
-        </div>
-        <span>BackendMons</span>
-        <div fxLayoutGap="10" fxLayout="row wrap" fxLayout.xs="row wrap">
-            <div *ngFor="let item of array; let i = index" class="backendmonsprojects backendmonsprojects_style flip mb20"  (click)="navigateToDetail(item.routeDetail)" fxLayout="column" fxFlex="10" fxFlex.sm="30" fxFlex.xs="40"> 
-                <div class="front" fxLayout="column">
-                    <img src="{{item.img}}" alt="img" class="img mt10">
-                    <span class="mb10 ml10" style="color: #F6F6F2;">{{item.nameProject}}</span>
-                </div>
-                <div class="backendmonsprojects_style back">
                    <span style="color: #F6F6F2; font-size: 87%;"> {{item.description}}</span>
                 </div>
             </div>
