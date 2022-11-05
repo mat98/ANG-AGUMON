@@ -1,5 +1,5 @@
 <div class="main">
-  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20">
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30">
     <div class="container-space">
       <form>
         <div [formGroup]="form">
@@ -7,67 +7,18 @@
             <span class="title-span">{{ contactMe }}</span>
           </div>
 
-          <div class="form-row">
-            <div class="mb10">
-              <mat-label>{{ formDescription.name }}: </mat-label>
-              <input
-                type="text"
-                formControlName="name"
-                matInput
-                autocomplete="off"
-                required
-              />
-            </div>
-
-            <div class="mb10">
-              <mat-label>{{ formDescription.emailAddress }}: </mat-label>
-              <input
-                type="text"
-                formControlName="name"
-                matInput
-                autocomplete="off"
-                required
-              />
-            </div>
-
-            <div class="mb10">
-              <mat-label>{{ formDescription.subjectContact }}: </mat-label>
-              <input
-                type="text"
-                formControlName="name"
-                matInput
-                autocomplete="off"
-                required
-              />
-            </div>
-
-            <div class="mb10">
-              <mat-label>{{ formDescription.messageContact }}: </mat-label>
-              <textarea class="form-control" rows="6" style="resize: none">
-              </textarea>
-            </div>
-            <div fxLayout="row" fxLayoutAlign="end end">
-              <button
-                type="button"
-                class="btn fixed-bottom mb10"
-                mat-raised-button
-                color="primary"
-              >
-                {{ btnSendMessage }}
-              </button>
-            </div>
-          </div>
+          <info-contact-org name="{{formDescription.name}}" email="{{formDescription.emailAddress}}"
+            subject="{{formDescription.subjectContact}}" message="{{formDescription.messageContact}}"
+            sendMessage="Enviar Mensagem">
+          </info-contact-org>
         </div>
       </form>
     </div>
-    <div
-      class="container-space"
-      fxLayout="column"
-    >
+    <div class="container-space">
       <div class="row">
         <span class="title-span">{{ labelMap }}</span>
       </div>
-      <div class="row mt10">
+      <div class="row">
         <app-map></app-map>
       </div>
     </div>

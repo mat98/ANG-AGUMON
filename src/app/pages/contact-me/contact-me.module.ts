@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactMeInitComponent } from './init/contact-me-init.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from 'src/app/shared/components/shared.module';
+import { InformationContactOrgModule } from 'src/app/organisms/info_contact_org/info_contact_org.module';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     RouterModule,
     SharedModule,
+    InformationContactOrgModule
   ],
   declarations: [ContactMeInitComponent],
 })
