@@ -8,12 +8,12 @@ import * as L from 'leaflet';
 })
 export class MapComponent implements OnInit {
   private map: any;
-  latLong = [-23.5279261,-46.5168308];
+  latLong = [-23.5489,-46.6388];
 
   private initMap(): void {
     this.map = L.map('map', {
       center: [this.latLong[0], this.latLong[1]],
-      zoom: 20,
+      zoom: 10,
     });
 
     var greenIcon = L.icon({

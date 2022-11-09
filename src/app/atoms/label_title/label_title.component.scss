@@ -1,0 +1,11 @@
+.title {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 1.0em;
+    font-size: 4em;
+
+    @media (min-width:801px) {
+        font-size: 10em;
+    }
+}

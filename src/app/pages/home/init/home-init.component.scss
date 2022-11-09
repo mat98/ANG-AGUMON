@@ -19,6 +19,8 @@
     }
 }
 
+
+
 .items_page {
     justify-content: center;
     display: flex;
@@ -30,7 +32,7 @@
 }
 
 .img {
-    width: 100px;
+    width: 100%;
 }
 
 .mobileprojects {
@@ -63,7 +65,7 @@
     position: relative;
     >.front,
     >.back {
-        display: block;
+        // display: block;
         transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
         transition-duration: .5s;
         transition-property: transform, opacity;
@@ -76,7 +78,7 @@
         opacity: 0;
         top: 0px;
         left: 0px;
-        width: 60%;
+        width: 80%;
         height: 80%;
         transform: rotateY(-180deg);
     }
