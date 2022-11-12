@@ -1,0 +1,8 @@
+.text {
+    font-size: 1em;
+    font-family: 'Verdana';
+
+    @media (min-width:801px) {
+        font-size: 1.1em;
+    }
+}
