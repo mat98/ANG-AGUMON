@@ -44,6 +44,10 @@ export class AuthenticatedLayoutComponent {
     this._router.navigate([route]);
   }
 
+  public goHome():void {
+    this._router.navigate([""]);
+  }
+
   public navigateToRedirectLinkExtern(link: string): void {
     window.open(link, "_blank");
   }

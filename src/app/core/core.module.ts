@@ -4,6 +4,7 @@ import { MaterialModule } from "../shared/components/material/material.module"
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { FlexLayoutModule } from "@angular/flex-layout"
 import { MatCarouselModule } from 'ng-mat-carousel'
+import { LogoTextModule } from './../atoms/logo-text/logo-text.module';
 
 const MODULES = [
     CommonModule,
@@ -11,7 +12,8 @@ const MODULES = [
     ReactiveFormsModule,
     MaterialModule,
     FlexLayoutModule,
-    MatCarouselModule
+    MatCarouselModule,
+    LogoTextModule
 ]
 
 const PIPES: any = [
