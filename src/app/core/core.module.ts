@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core"
 import { MaterialModule } from "../shared/components/material/material.module"
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { FlexLayoutModule } from "@angular/flex-layout"
+import { MatCarouselModule } from 'ng-mat-carousel'
 
 const MODULES = [
     CommonModule,
@@ -10,6 +11,7 @@ const MODULES = [
     ReactiveFormsModule,
     MaterialModule,
     FlexLayoutModule,
+    MatCarouselModule
 ]
 
 const PIPES: any = [

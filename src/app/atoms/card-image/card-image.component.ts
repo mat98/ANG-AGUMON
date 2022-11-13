@@ -6,9 +6,9 @@ import { Component, Input } from "@angular/core";
     styleUrls: ["./card-image.component.scss"]
 })
 export class CardImageComponent {
-    _src: string = "https://material.angular.io/assets/img/examples/shiba2.jpg";
+    _src: string = "";
     _alt: string = "";
-
+    
     @Input() src: string | undefined;
     @Input() alt: string | undefined;
 

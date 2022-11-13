@@ -7,10 +7,13 @@ import { Component, Input } from "@angular/core";
 })
 export class CardWithImageContainerComponent {
     _text: string = "";
+    _src: string = "";
 
     @Input() text: string | undefined;
+    @Input() image: string | undefined;
 
     ngOnInit() {
         if (this.text) this._text = this.text;
+        if (this.image) this._src = this.image;
     }
 }
