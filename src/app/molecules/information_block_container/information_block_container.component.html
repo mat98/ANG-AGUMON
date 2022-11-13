@@ -1,6 +1,8 @@
 <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10">
     <information-block-component itemTitle="Recursos utilizados" [itemSubtitle]="technologys" icon="recourses">
     </information-block-component>
-    <information-block-component itemTitle="Objetivos com o projeto" icon="goals"></information-block-component>
-    <information-block-component itemTitle="Próximos passos" icon="next_steps"></information-block-component>
+    <information-block-component itemTitle="Objetivos com o projeto" [itemSubtitle]="objective" icon="goals">
+    </information-block-component>
+    <information-block-component itemTitle="Próximos passos" [itemSubtitle]="nextStep" icon="next_steps">
+    </information-block-component>
 </div>

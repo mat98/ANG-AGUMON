@@ -8,6 +8,7 @@ import { Component, Input } from "@angular/core";
 export class InformationBlockComponent {
     _icon: string = "home";
     _itemTitle: string = "Título";
+    _itemSubtitle = "Sub";
     _isIconSetValid = false;
     _icon_recourses = "recourses";
     _icon_goals = "goals";
@@ -22,5 +23,6 @@ export class InformationBlockComponent {
     ngOnInit() {
         if (this.icon) this._icon = this.icon;
         if (this.itemTitle) this._itemTitle = this.itemTitle;
+        if (this.itemSubtitle) this._itemSubtitle = this.itemSubtitle;
     }
 }

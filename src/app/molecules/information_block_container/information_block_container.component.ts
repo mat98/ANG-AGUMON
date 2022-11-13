@@ -13,6 +13,8 @@ export class InformationBlockContainerComponent {
         "- Express",
         "- Vuetify",
     ];
+    objective: any = ["TODO"]
+    nextStep: any = ["TODO"]
     // technologys: string = "Babel\n-Axios \n | Express \n| Vuetify";
 
     constructor() { }
