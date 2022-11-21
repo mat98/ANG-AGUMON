@@ -1,0 +1,17 @@
+<div class="background">
+    <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="10">
+        <div fxFlex="50" class="mb20">
+            <app-info-project-container [text]="text" [info_title]="infoTitle"></app-info-project-container>
+        </div>
+        <br>
+        <div fxLayout="column">
+            <app-label-subtitle text="Imagens do sistema" class="mb20"></app-label-subtitle>
+            <app-divider class="mb20"></app-divider>
+            <div fxLayout="row"  fxLayout.xs="column" fxLayoutGap="20">
+                <app-card-with-image-container [image]="imagesProject[0]" [text]="textsProjects[0]"></app-card-with-image-container>
+                <app-card-with-image-container [image]="imagesProject[1]" [text]="textsProjects[1]"></app-card-with-image-container>
+                <app-card-with-image-container [image]="imagesProject[2]" [text]="textsProjects[2]" class="mb20"></app-card-with-image-container>
+            </div>
+        </div>
+    </div>
+</div>
