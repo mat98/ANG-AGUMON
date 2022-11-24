@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class ImageTitleAndSubscriptionComponent {
   @Input() text: string = '';
   @Input() image: string = '';
+  @Input() digivice: string = '';
   @Input() path: string = '';
 
   constructor(private _router: Router) {}
