@@ -1,35 +1,43 @@
 <div class="main">
-    <div fxLayout="column wrap" fxLayoutGap="10" class="items_page mt20">
-        <h2>Olá, meu nome é Mateus!</h2>
-        <br>
-        <div style="max-width: 70%">
-            <mat-divider></mat-divider>
-        </div>
-        <span>Segue abaixo a lista dos meus <strong>DigiProjects</strong> e acompanhe suas digievoluções 😀</span>
-
-        <span>MobileMons</span>
-        <div fxLayoutGap="10" fxLayout="row wrap" fxLayout.xs="row wrap">
-            <div *ngFor="let item of array; let i = index" class="mobileprojects flip mb20"  (click)="navigateToDetail(item.routeDetail)" fxLayout="column" fxFlex="10" fxFlex.sm="30" fxFlex.xs="40"> 
-                <div class="front" fxLayout="column">
-                    <img src="{{item.img}}" alt="img" class="img mt10">
-                    <span class="mb10 ml10" style="color: #F6F6F2;">{{item.nameProject}}</span>
-                </div>
-                <div class="back" style="background-color: #008080;">
-                   <span style="color: #F6F6F2; font-size: 87%;"> {{item.description}}</span>
-                </div>
-            </div>
-        </div>
-        <span>WebMons</span>
-        <div fxLayoutGap="10" fxLayout="row wrap" fxLayout.xs="row wrap">
-            <div *ngFor="let item of array; let i = index" class="webmonsprojects webmonsprojects_style flip mb20"  (click)="navigateToDetail(item.routeDetail)" fxLayout="column" fxFlex="10" fxFlex.sm="30" fxFlex.xs="40"> 
-                <div class="front" fxLayout="column">
-                    <img src="{{item.img}}" alt="img" class="img mt10">
-                    <span class="webmonsprojects mb10 ml10" style="color: #F6F6F2;">{{item.nameProject}}</span>
-                </div>
-                <div class="webmonsprojects_style back">
-                   <span style="color: #F6F6F2; font-size: 87%;"> {{item.description}}</span>
-                </div>
-            </div>
-        </div>
+  <div fxLayout="column wrap" fxLayoutGap="10" class="items_page mt20">
+    <h2>Olá, meu nome é Mateus!</h2>
+    <br />
+    <div style="max-width: 70%">
+      <mat-divider></mat-divider>
     </div>
+    <span
+      >Segue abaixo a lista dos meus <strong>DigiProjects</strong> e acompanhe
+      suas digievoluções 😀</span
+    >
+
+    <br />
+    <!-- <app-label text="MObileMOns"></app-label> -->
+    <h3>MobileMons</h3>
+
+    <div
+      fxLayout
+      fxLayout.xs="column wrap"
+      fxLayoutAlign="space-between"
+      fxLayoutWrap="wrap"
+      
+    >
+      <div
+        fxLayout="row wrap"
+        fxLayout.xs="column wrap"
+        fxLayoutWrap="wrap"
+        fxLayoutAlign="space-around"
+        fxFlex="100%"
+      >
+        <div *ngFor="let item of array; let i = index">
+          <div class="mb20">
+            <app-image-title-and-subscription
+            [image]="item.img"
+            [text]="item.description"
+            [path]="item.routeDetail"
+          ></app-image-title-and-subscription>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

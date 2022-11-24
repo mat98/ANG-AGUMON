@@ -1,3 +1,7 @@
+import { LabelModule } from './../../shared/atoms/label/label.module';
+import { TextModule } from './../../shared/atoms/text/text.module';
+import { ImageTitleAndSubscriptionComponentModule } from './../../shared/molecules/image-title-and-subscription/image-title-and-subscription.module';
+import { ImageModule } from './../../shared/atoms/image/image.module';
 import { CoreModule } from './../../core/core.module';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
@@ -14,7 +18,9 @@ const routes: Routes = [
     imports: [
         CoreModule,
         RouterModule.forChild(routes),
-        RouterModule
+        RouterModule,
+        LabelModule,
+        ImageTitleAndSubscriptionComponentModule
     ],
     declarations: [HomeInitComponent]
 })

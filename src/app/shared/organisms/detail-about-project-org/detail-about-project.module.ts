@@ -7,6 +7,7 @@ import { DividerModule } from '../../atoms/divider/divider.module';
 import { LabelSubtitleModule } from '../../atoms/label-subtitle/label-subtitle.module';
 import { LabelTitleModule } from '../../atoms/label-title/label-title.module';
 import { LabelModule } from '../../atoms/label/label.module';
+import { ImageTitleAndSubscriptionComponentModule } from '../../molecules/image-title-and-subscription/image-title-and-subscription.module';
 import { DetailAboutProjectOrgComponent } from './detail-about-project-org.component';
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DetailAboutProjectOrgComponent } from './detail-about-project-org.compo
         LabelModule,
         LabelSubtitleModule,
         LabelTitleModule,
-        DividerModule
+        DividerModule,
+        ImageTitleAndSubscriptionComponentModule
     ]
 })
 export class DetailAboutProjectOrgModule { }

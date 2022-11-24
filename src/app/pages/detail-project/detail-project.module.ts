@@ -11,9 +11,6 @@ import { DetailAboutProjectOrgModule } from 'src/app/shared/organisms/detail-abo
 
 const routes: Routes = [
     {
-        path: '',
-    },
-    {
         path: ':linkProject',
         component: DetailProjectInitComponent,
     },

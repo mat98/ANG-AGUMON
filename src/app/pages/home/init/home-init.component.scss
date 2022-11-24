@@ -13,6 +13,15 @@
         }
     }
 
+    h3 {
+        font-size: 1.2em;
+        color: #0C0B0B;
+        @media (min-width:1025px) {
+            font-size: 2em;
+            color: #0C0B0B;
+        }
+    }
+
     span {
         font-size: 1.2em;
         color: #54544E;
