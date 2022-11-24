@@ -10,7 +10,9 @@ export class InputContactContainer {
     _labelLeft: string = ""
 
     @Input() labelRight: string | undefined;
+    @Input() placeholderRight: string = '';
     @Input() labelLeft: string | undefined;
+    @Input() placeholderLeft: string = '';
 
     ngOnInit(): void {
         if (this.labelRight) this._labelRight = this.labelRight;

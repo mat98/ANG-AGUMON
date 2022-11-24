@@ -1,3 +1,20 @@
-<app-detail-about-project-org text="{{info}}" [infoTitle]="_info_title" [imagesProject]="_imagesProject"
+<!-- <app-detail-about-project-org text="{{info}}" [infoTitle]="_info_title" [imagesProject]="_imagesProject"
     [textsProjects]="_textsProject"></app-detail-about-project-org>
-<app-information-org></app-information-org>
+<app-information-org></app-information-org> -->
+
+<div class="background">
+    <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="10">
+        <div fxFlex="50" class="mb20">
+            <app-info-project-container [text]="info" info_title="Informações gerais"></app-info-project-container>
+        </div>
+        <br>
+        <div fxLayout="column">
+            <app-label-subtitle text="Imagens do sistema" class="mb20"></app-label-subtitle>
+            <app-divider class="mb20"></app-divider>
+            <div fxLayout="row"  fxLayout.xs="column" fxLayoutGap="20">
+                <app-card-with-image-container [image]="_imagesProject[0]" [text]="_textsProject[0]"></app-card-with-image-container>
+                <app-card-with-image-container [image]="_imagesProject[1]" [text]="_textsProject[1]"></app-card-with-image-container>
+                <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20"></app-card-with-image-container>
+            </div>
+        </div>
+</div>

@@ -5,7 +5,7 @@ import {
   faCog,
   faMapSigns,
   faSignOutAlt,
-  faFileAlt
+  faFileAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -33,8 +33,19 @@ export class AuthenticatedLayoutComponent {
 
   private generateRoutes() {
     this.routes = [
-      { route: '/', icon: "home", description: 'Home' },
-      { route: '/teste', icon: "contacts", description: 'Contate-Me' },
+      { route: '/', icon: 'home', description: 'Home' },
+      // {
+      //   route: '/',
+      //   icon: 'home',
+      //   description: 'Projects',
+      //   children: [
+      //     {
+      //       path: 'coins',
+      //       description: 'Projects',
+      //     },
+      //   ],
+      // },
+      { route: '/teste', icon: 'contacts', description: 'Contate-Me' },
       // { route: '/farm/list', icon: this.icons.faMapSigns, description: 'app.farms' },
     ];
   }
@@ -44,16 +55,16 @@ export class AuthenticatedLayoutComponent {
     this._router.navigate([route]);
   }
 
-  public goHome():void {
-    this._router.navigate([""]);
+  public goHome(): void {
+    this._router.navigate(['']);
   }
 
   public navigateToRedirectLinkExtern(link: string): void {
-    window.open(link, "_blank");
+    window.open(link, '_blank');
   }
 
   public toggleSidenav(sidenav: any) {
-    if(sidenav.opened) {
+    if (sidenav.opened) {
       sidenav.close();
     } else {
       sidenav.open();

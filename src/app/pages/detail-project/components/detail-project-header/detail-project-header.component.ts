@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Component, Input, OnDestroy, OnInit } from "@angular/core";
 
 @Component({
     selector: "app-detail-project-header",
@@ -7,6 +7,7 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 })
 
 export class DetailProjectHeaderComponent implements OnInit, OnDestroy {
+    @Input() title = ''
     ngOnInit(): void { }
 
     ngOnDestroy(): void { }

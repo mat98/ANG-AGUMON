@@ -1,5 +1,5 @@
 import { CoreModule } from "src/app/core/core.module";
-import { NgModule } from "@angular/core";
+import { Input, NgModule } from "@angular/core";
 import { InputTextComponent } from './input_text.component';
 
 @NgModule({
@@ -11,4 +11,4 @@ import { InputTextComponent } from './input_text.component';
         CoreModule
     ]
 })
-export class InputTextModule { }
+export class InputTextModule {}

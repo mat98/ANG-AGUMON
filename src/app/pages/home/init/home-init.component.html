@@ -41,5 +41,72 @@
         </div>
       </div>
     </div>
+
+
+
+    <br /><br /><br />
+    <!-- <app-label text="MObileMOns"></app-label> -->
+    <h3>🎨 <strong>FrontMons</strong></h3>
+    <br />
+
+    <div
+      fxLayout
+      fxLayout.xs="column wrap"
+      fxLayoutAlign="space-between"
+      fxLayoutWrap="wrap"
+      
+    >
+      <div
+        fxLayout="row wrap"
+        fxLayout.xs="column wrap"
+        fxLayoutWrap="wrap"
+        fxLayoutAlign="space-around"
+        fxFlex="100%"
+      >
+        <div *ngFor="let item of array; let i = index">
+          <div class="mb20">
+            <app-image-title-and-subscription
+            [image]="item.img"
+            [text]="item.description"
+            [path]="item.routeDetail"
+            [digivice]="item.digivice"
+          ></app-image-title-and-subscription>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <br /><br /><br />
+    <!-- <app-label text="MObileMOns"></app-label> -->
+    <h3>⚙️ <strong>BackMons</strong></h3>
+    <br />
+
+    <div
+      fxLayout
+      fxLayout.xs="column wrap"
+      fxLayoutAlign="space-between"
+      fxLayoutWrap="wrap"
+      
+    >
+      <div
+        fxLayout="row wrap"
+        fxLayout.xs="column wrap"
+        fxLayoutWrap="wrap"
+        fxLayoutAlign="space-around"
+        fxFlex="100%"
+      >
+        <div *ngFor="let item of array; let i = index">
+          <div class="mb20">
+            <app-image-title-and-subscription
+            [image]="item.img"
+            [text]="item.description"
+            [path]="item.routeDetail"
+            [digivice]="item.digivice"
+          ></app-image-title-and-subscription>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
