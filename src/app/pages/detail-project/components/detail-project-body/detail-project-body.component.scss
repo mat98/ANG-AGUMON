@@ -2,3 +2,29 @@
     background-color: #F6F6F6;
     padding: 40px;
 }
+
+.progress-wrapper {
+    position: relative;
+    width: 10rem;
+}
+
+.current {
+    position: absolute;
+    color: #bbb;
+    font-weight: 100;
+    line-height: 1;
+}
+
+round-progress {
+    margin: auto;
+}
+
+#container {
+    margin: 20px;
+    width: 200px;
+    height: 100px;
+}
+
+.icon {
+    color: black
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 
 @Component({
@@ -9,7 +9,7 @@ import { Location } from '@angular/common';
 })
 export class ContactMeInitComponent implements OnInit {
   isLoading: boolean = false;
-  form: FormGroup;
+  form: UntypedFormGroup;
   formDescription: any = {
     name: 'Nome',
     emailAddress: 'Email de contato',
@@ -24,7 +24,7 @@ export class ContactMeInitComponent implements OnInit {
   numberConnection = '2';
   textConnection = 'Conexões realizadas a partir do meio de contato';
 
-  constructor(private _fb: FormBuilder, private _location: Location) {
+  constructor(private _fb: UntypedFormBuilder, private _location: Location) {
     this.form = this._fb.group({
       captureDate: [null],
     });

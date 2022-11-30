@@ -1,3 +1,4 @@
+import { DividerModule } from './../../shared/atoms/divider/divider.module';
 import { LabelModule } from './../../shared/atoms/label/label.module';
 import { TextModule } from './../../shared/atoms/text/text.module';
 import { ImageTitleAndSubscriptionComponentModule } from './../../shared/molecules/image-title-and-subscription/image-title-and-subscription.module';
@@ -20,6 +21,7 @@ const routes: Routes = [
         RouterModule.forChild(routes),
         RouterModule,
         LabelModule,
+        DividerModule,
         ImageTitleAndSubscriptionComponentModule
     ],
     declarations: [HomeInitComponent]

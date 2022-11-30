@@ -17,6 +17,27 @@
                 <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20"></app-card-with-image-container>
             </div>
         </div>
+        <div fxLayout="column">
+            <app-label-subtitle text="Versões do projeto" class="mb20"></app-label-subtitle>
+            <app-divider class="mb20"></app-divider>
+            <div fxLayout="row">
+                <app-label text="V0.01" class="mr10"></app-label>
+                <a href="https://github.com/mat98/VUE-CHAPMON/releases/tag/0.1" target="_blank"><mat-icon class="icon">download</mat-icon></a>
+            </div>
+            <app-label text="- Criação da tela de informações básicas e de saldo" class="mb10"></app-label>
+            <app-label text="- Criação da tela de compra de ações" class="mb10"></app-label>
+            <app-label text="- Criação da tela de venda de ações" class="mb10"></app-label>
+            <div fxLayout="row">
+                <div class="progress-wrapper mr20" fxLayout="column">
+                    <div class="current" [ngStyle]="getOverlayStyle()">{{ "🖼️" + currentFront }}/{{ max }}</div>
+                    <round-progress color = "#1fb8ab" [current]="currentFront" [stroke]="20" [max]="max" [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
+                </div>
+                <div class="progress-wrapper mr20" fxLayout="column">
+                    <div class="current" [ngStyle]="getOverlayStyle()">{{ "🔙" + currentBack }}/{{ max }}</div>
+                    <round-progress color = "#1fb8ab" [current]="currentBack" [stroke]="20" [max]="max" [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="mt20">
         <information-block-container class="mt10"></information-block-container>

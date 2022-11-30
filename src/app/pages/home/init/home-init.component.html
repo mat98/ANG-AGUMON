@@ -2,47 +2,19 @@
   <div fxLayout="column wrap" fxLayoutGap="10" class="items_page mt20">
     <h2>Olá, meu nome é Mateus!</h2>
     <br />
-    <div style="max-width: 70%">
-      <mat-divider></mat-divider>
-    </div>
+    <app-divider class="mb20 mt20"></app-divider>
     <span
       >Segue abaixo a lista dos meus <strong>DigiProjects</strong> e acompanhe
-      suas digievoluções 😀</span
+      suas digievoluções</span
     >
 
     <br /><br /><br />
-    <!-- <app-label text="MObileMOns"></app-label> -->
     <h3>📱 <strong>MobileMons</strong></h3>
     <br />
 
-    <div
-      fxLayout
-      fxLayout.xs="column wrap"
-      fxLayoutAlign="space-between"
-      fxLayoutWrap="wrap"
-      
-    >
-      <div
-        fxLayout="row wrap"
-        fxLayout.xs="column wrap"
-        fxLayoutWrap="wrap"
-        fxLayoutAlign="space-around"
-        fxFlex="100%"
-      >
-        <div *ngFor="let item of array; let i = index">
-          <div class="mb20">
-            <app-image-title-and-subscription
-            [image]="item.img"
-            [text]="item.description"
-            [path]="item.routeDetail"
-            [digivice]="item.digivice"
-          ></app-image-title-and-subscription>
-          </div>
-        </div>
-      </div>
+    <div>
+      <app-label text="Nenhum projeto cadastrado"></app-label>
     </div>
-
-
 
     <br /><br /><br />
     <!-- <app-label text="MObileMOns"></app-label> -->
@@ -54,13 +26,12 @@
       fxLayout.xs="column wrap"
       fxLayoutAlign="space-between"
       fxLayoutWrap="wrap"
-      
     >
       <div
         fxLayout="row wrap"
         fxLayout.xs="column wrap"
         fxLayoutWrap="wrap"
-        fxLayoutAlign="space-around"
+        fxLayoutAlign="space-between left"
         fxFlex="100%"
       >
         <div *ngFor="let item of array; let i = index">
@@ -82,31 +53,8 @@
     <h3>⚙️ <strong>BackMons</strong></h3>
     <br />
 
-    <div
-      fxLayout
-      fxLayout.xs="column wrap"
-      fxLayoutAlign="space-between"
-      fxLayoutWrap="wrap"
-      
-    >
-      <div
-        fxLayout="row wrap"
-        fxLayout.xs="column wrap"
-        fxLayoutWrap="wrap"
-        fxLayoutAlign="space-around"
-        fxFlex="100%"
-      >
-        <div *ngFor="let item of array; let i = index">
-          <div class="mb20">
-            <app-image-title-and-subscription
-            [image]="item.img"
-            [text]="item.description"
-            [path]="item.routeDetail"
-            [digivice]="item.digivice"
-          ></app-image-title-and-subscription>
-          </div>
-        </div>
-      </div>
+    <div>
+      <app-label text="Nenhum projeto cadastrado"></app-label>
     </div>
   </div>
 </div>

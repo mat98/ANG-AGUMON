@@ -13,6 +13,7 @@ import { DetailProjectHeaderComponent } from './components/detail-project-header
 import { DetailProjectBodyComponent } from './components/detail-project-body/detail-project-body.component';
 import { InformationOrgModule } from 'src/app/shared/organisms/information-org/information-org.module';
 import { HeaderItemProjectOrgModule } from 'src/app/shared/organisms/header_item_project_org/header_item_project.module';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
 const routes: Routes = [
     {
@@ -34,7 +35,8 @@ const routes: Routes = [
         InfoProjectContainerModule,
         InformationOrgModule,
         HeaderItemProjectOrgModule,
-        InformationBlockContainerModule
+        InformationBlockContainerModule,
+        RoundProgressModule
     ],
     declarations: [
         DetailProjectInitComponent,

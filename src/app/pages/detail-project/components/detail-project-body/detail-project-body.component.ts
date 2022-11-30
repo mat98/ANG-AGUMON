@@ -15,4 +15,21 @@ export class DetailProjectBodyComponent implements OnInit {
     info = "Projeto criado para simular a compra e venda de ações na bolsa americana, inicialmente a simulação te da a opção de 10 mil doláres para realizar as compras e também a opção de que quando finalizar o dia, simular a queda ou a subida dos valores das ações."
 
     frequencyArray = [1, 2, 3, 4, 5, 6];
+
+    currentBack = 0;
+    currentFront = 10;
+    max = 100;
+
+    getOverlayStyle() {
+        const isSemi = true;
+        const transform = (isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';
+    
+        return {
+          top: isSemi ? 'auto' : '50%',
+          bottom: isSemi ? '5%' : 'auto',
+          left: '45%',
+          transform,
+          fontSize: 20 + 'px',
+        };
+      }
 }
