@@ -20,7 +20,7 @@ export class DetailProjectBodyComponent implements OnInit {
     currentFront = 10;
     max = 100;
 
-    getOverlayStyle() {
+    getOverlayStyle(color: string) {
         const isSemi = true;
         const transform = (isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';
     
@@ -30,6 +30,7 @@ export class DetailProjectBodyComponent implements OnInit {
           left: '45%',
           transform,
           fontSize: 20 + 'px',
+          color: color
         };
       }
 }

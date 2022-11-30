@@ -66,13 +66,30 @@
     <mat-sidenav [autoFocus]="false" #sidenav fxLayout="column" style="width: 250px">
       <div fxLayout="column">
         <span class="mt10"></span>
-        <span *ngFor="let route of routes" fxLayout="row" fxLayoutAlign="start center" class="menu-item"
-          (click)="navigateTo(route.route); sidenav.close()" [ngClass]="{ active: activeRoute === route.route }">
-          <div fxLayout="row" fxLayoutAlign="start center" class="menu-item-box">
-            <mat-icon class="mr10">{{route.icon}}</mat-icon>
-            <span>{{route.description}}</span>
+        <div *ngFor="let route of routes">
+          <span fxLayout="row" fxLayoutAlign="start center" class="menu-item"
+            (click)="navigateTo(route);" [ngClass]="verifyActive(route.route)">
+            <div fxLayout="row" fxLayoutAlign="start center" class="menu-item-box">
+              <mat-icon class="mr10">{{route.icon}}</mat-icon>
+              <span>{{route.description}}</span>
+            </div>
+          </span>
+
+          <!-- Rotas que tem collapse -->
+          <div *ngIf="route.collapsed">
+            <div *ngFor="let c of route.children">
+              <span fxLayout="row" fxLayoutAlign="start center" class="menu-item"
+                (click)="navigateTo(c); sidenav.close()">
+                <div fxLayout="row" fxLayoutAlign="start center" class="menu-item-box">
+                  <mat-icon class="ml20 mr10">{{c.icon}}</mat-icon>
+                  <span>{{c.description}}</span>
+                </div>
+              </span>
+            </div>
           </div>
-        </span>
+
+        </div>
+
       </div>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>

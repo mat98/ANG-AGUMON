@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ROUTES } from './../../constants/routes';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   faChartLine,
@@ -7,6 +8,7 @@ import {
   faSignOutAlt,
   faFileAlt,
 } from '@fortawesome/free-solid-svg-icons';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-authenticated-layout',
@@ -25,6 +27,7 @@ export class AuthenticatedLayoutComponent {
   };
   userRoles: String[] = [];
   username: string = '';
+  @ViewChild('sidenav') sidenav: MatSidenav | undefined;
 
   constructor(private _router: Router) {
     this.activeRoute = this._router.url;
@@ -32,31 +35,30 @@ export class AuthenticatedLayoutComponent {
   }
 
   private generateRoutes() {
-    this.routes = [
-      { route: '/', icon: 'home', description: 'Home' },
-      // {
-      //   route: '/',
-      //   icon: 'home',
-      //   description: 'Projects',
-      //   children: [
-      //     {
-      //       path: 'coins',
-      //       description: 'Projects',
-      //     },
-      //   ],
-      // },
-      { route: '/teste', icon: 'contacts', description: 'Contate-Me' },
-      // { route: '/farm/list', icon: this.icons.faMapSigns, description: 'app.farms' },
-    ];
+    this.routes = ROUTES;
   }
 
-  public navigateTo(route: string): void {
-    this.activeRoute = route;
-    this._router.navigate([route]);
+  public navigateTo(route: any): void {
+    if (!route.route) {
+      route.collapsed = !route.collapsed;
+      if (route.icon === 'keyboard_arrow_down') {
+        route.icon = 'keyboard_arrow_up';
+      } else {
+        route.icon = 'keyboard_arrow_down';
+      }
+    } else {
+      this.activeRoute = route.route;
+      this._router.navigate([route.route]);
+      this.sidenav?.close();
+    }
   }
 
   public goHome(): void {
     this._router.navigate(['']);
+  }
+
+  public verifyActive(route: string) {
+    return this.activeRoute === route ? "active" : '';
   }
 
   public navigateToRedirectLinkExtern(link: string): void {
