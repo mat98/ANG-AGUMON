@@ -1,3 +1,4 @@
+import { ButtonModule } from './../../shared/atoms/button/button.module';
 import { InformationBlockContainerModule } from './../../shared/molecules/information_block_container/information_block_container.module';
 import { DividerModule } from './../../shared/atoms/divider/divider.module';
 import { CardWithImageContainerModule } from 'src/app/shared/molecules/card-with-image-container/card-with-image-container.module';
@@ -35,6 +36,7 @@ const routes: Routes = [
         InfoProjectContainerModule,
         InformationOrgModule,
         HeaderItemProjectOrgModule,
+        ButtonModule,
         InformationBlockContainerModule,
         RoundProgressModule
     ],

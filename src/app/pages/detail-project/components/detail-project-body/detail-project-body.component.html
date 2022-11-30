@@ -1,7 +1,3 @@
-<!-- <app-detail-about-project-org text="{{info}}" [infoTitle]="_info_title" [imagesProject]="_imagesProject"
-    [textsProjects]="_textsProject"></app-detail-about-project-org>
-<app-information-org></app-information-org> -->
-
 <div class="background">
     <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="10">
         <div fxFlex="50" class="mb20">
@@ -9,16 +5,20 @@
         </div>
         <br>
         <div fxLayout="column">
-            <app-label-subtitle text="Imagens do sistema" class="mb20"></app-label-subtitle>
+            <app-label-subtitle text="Conheça mais sobre a plataforma" class="mb20"></app-label-subtitle>
             <app-divider class="mb20"></app-divider>
-            <div fxLayout="row"  fxLayout.xs="column" fxLayoutGap="20">
+            <div id="group-images" fxLayout="row"  fxLayout.xs="column"  fxLayout.sm="column wrap" fxLayout.md="row wrap" fxLayoutGap="20" class="mat-elevation-z0 outline">
                 <app-card-with-image-container [image]="_imagesProject[0]" [text]="_textsProject[0]"></app-card-with-image-container>
                 <app-card-with-image-container [image]="_imagesProject[1]" [text]="_textsProject[1]"></app-card-with-image-container>
                 <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20"></app-card-with-image-container>
+                <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20"></app-card-with-image-container>
+                <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20"></app-card-with-image-container>
             </div>
+            <app-button label="Link para o projeto"></app-button>
+            <!-- https://coderstocks98x.netlify.app -->
         </div>
         <div fxLayout="column">
-            <app-label-subtitle text="Versões do projeto" class="mb20"></app-label-subtitle>
+            <app-label-subtitle text="Versões do projeto" class="mt20 mb20"></app-label-subtitle>
             <app-divider class="mb20"></app-divider>
             <mat-card fxLayout="column">
                 <div fxLayout="row" fxLayoutAlign="space-between">

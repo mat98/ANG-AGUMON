@@ -1,8 +1,12 @@
 img {
-    height: fit-content; //so that it takes up full space
+    height: content; //so that it takes up full space
     max-height: 50rem !important; // this prevents the image from being extremely big
     min-height: 12rem !important; // this pre
-    // object-fit: cover;
     object-position: center;
-    /* this centers and crops the image so that it doesn't break the aspect ratio */
+    height: 10px;
+
+    @media (max-width:900px) {
+        height: auto;
+        // object-fit: cover;
+    }
 }

@@ -23,6 +23,24 @@ mat-card {
     width: 20rem;
 }
 
+#group-images {
+    width:  100%;
+    border-radius: none;
+}
+
+.teste{
+    background-color: white;
+}
+
+app-button {
+    width: 40%;
+    align-self: center;
+
+    @media (max-width:900px) {
+        width: 100%;
+    }
+}
+
 #container {
     margin: 20px;
     width: 200px;
