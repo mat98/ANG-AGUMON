@@ -7,14 +7,23 @@
         <div fxLayout="column">
             <app-label-subtitle text="Conheça mais sobre a plataforma" class="mb20"></app-label-subtitle>
             <app-divider class="mb20"></app-divider>
-            <div id="group-images" fxLayout="row"  fxLayout.xs="column"  fxLayout.sm="column wrap" fxLayout.md="row wrap" fxLayoutGap="20" class="mat-elevation-z0 outline">
-                <app-card-with-image-container [image]="_imagesProject[0]" [text]="_textsProject[0]"></app-card-with-image-container>
-                <app-card-with-image-container [image]="_imagesProject[1]" [text]="_textsProject[1]"></app-card-with-image-container>
-                <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20"></app-card-with-image-container>
-                <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20"></app-card-with-image-container>
-                <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20"></app-card-with-image-container>
+            <div id="group-images" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column wrap" fxLayout.md="row wrap"
+                fxLayoutGap="20" class="mat-elevation-z0 outline">
+                <app-card-with-image-container [image]="_imagesProject[0]" [text]="_textsProject[0]">
+                </app-card-with-image-container>
+                <app-card-with-image-container [image]="_imagesProject[1]" [text]="_textsProject[1]">
+                </app-card-with-image-container>
+                <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20">
+                </app-card-with-image-container>
+                <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20">
+                </app-card-with-image-container>
+                <app-card-with-image-container [image]="_imagesProject[2]" [text]="_textsProject[2]" class="mb20">
+                </app-card-with-image-container>
             </div>
-            <app-button label="Link para o projeto"></app-button>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10" fxLayoutAlign="center">
+                <app-button (handlerBtn)="teste($event)" label="Link para o projeto"></app-button>
+                <app-button (handlerBtn)="teste2($event)" color="basic" label="Link para o repositório"></app-button>
+            </div>
             <!-- https://coderstocks98x.netlify.app -->
         </div>
         <div fxLayout="column">
@@ -22,8 +31,12 @@
             <app-divider class="mb20"></app-divider>
             <mat-card fxLayout="column">
                 <div fxLayout="row" fxLayoutAlign="space-between">
-                    <strong><app-label text="V0.01" class="mr10"></app-label></strong>
-                    <a href="https://github.com/mat98/VUE-CHAPMON/releases/tag/0.1" target="_blank" ><mat-icon class="icon">download</mat-icon></a>
+                    <strong>
+                        <app-label text="V0.01" class="mr10"></app-label>
+                    </strong>
+                    <a href="https://github.com/mat98/VUE-CHAPMON/releases/tag/0.1" target="_blank">
+                        <mat-icon class="icon">download</mat-icon>
+                    </a>
                 </div>
                 <app-label text="- Criação da tela de informações básicas e de saldo" class="mb10"></app-label>
                 <app-label text="- Criação da tela de compra de ações" class="mb10"></app-label>
@@ -31,13 +44,16 @@
                 <div fxLayout="row">
                     <div class="progress-wrapper mr20" fxLayout="column">
                         <strong>Frontend:</strong>
-                        <div class="current" [ngStyle]="getOverlayStyle('#1fb8ab')">{{ "🖼️ " + currentFront +"%"}}</div>
-                        <round-progress color = "#1fb8ab" [current]="currentFront" [stroke]="20" [max]="max" [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
+                        <div class="current" [ngStyle]="getOverlayStyle('#1fb8ab')">{{ "🖼️ " + currentFront +"%"}}
+                        </div>
+                        <round-progress color="#1fb8ab" [current]="currentFront" [stroke]="20" [max]="max"
+                            [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
                     </div>
                     <div class="progress-wrapper mr20" fxLayout="column">
                         <strong>Backend:</strong>
                         <div class="current" [ngStyle]="getOverlayStyle('#635994')">{{ "🔙 " + currentBack +"%" }}</div>
-                        <round-progress color = "#635994" [current]="currentBack" [stroke]="20" [max]="max" [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
+                        <round-progress color="#635994" [current]="currentBack" [stroke]="20" [max]="max"
+                            [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
                     </div>
                 </div>
             </mat-card>
