@@ -8,7 +8,6 @@ export const ROUTES = [
         children: []
     },
     {
-        // route: '/detail-project',
         icon: 'keyboard_arrow_down',
         description: 'FrontMons',
         showMenu: true,
@@ -16,5 +15,13 @@ export const ROUTES = [
         children: [
             { route: '/detail-project/chapmon', icon: 'computer', description: 'Compra e Venda de ações', showMenu: true },
         ]
+    },
+    {
+        route: '/teste',
+        roles: [],
+        icon: 'contacts',
+        description: 'Contate-Me',
+        showMenu: true,
+        children: []
     },
 ];
