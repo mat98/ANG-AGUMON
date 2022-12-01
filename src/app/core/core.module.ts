@@ -8,6 +8,7 @@ import { MatCarouselModule } from 'ng-mat-carousel'
 import { LogoTextModule } from "../shared/atoms/logo-text/logo-text.module"
 import { MapComponent } from "./components/map/map.component"
 import { FooterComponent } from "./components/footer/footer.component"
+import { HorizontalTimelineComponent } from "./components/horizontal-timeline/horizontal-timeline.component"
 
 const MODULES = [
     CommonModule,
@@ -21,7 +22,7 @@ const MODULES = [
 
 const COMPONENTS = [
     MapComponent,
-    FooterComponent
+    FooterComponent,
 ]
 
 const PIPES: any = [
@@ -31,7 +32,7 @@ const PIPES: any = [
 @NgModule({
     declarations: [
         PIPES,
-        COMPONENTS
+        COMPONENTS,
     ],
     imports: [
         MODULES

@@ -21,6 +21,14 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'working-exp',
+        canActivate: [],
+        loadChildren: () =>
+          import('./pages/professional-exp/working-exp.module').then(
+            (m) => m.WorkingExpModule
+          ),
+      },
+      {
         path: 'detail-project',
         canActivate: [],
         loadChildren: () => 

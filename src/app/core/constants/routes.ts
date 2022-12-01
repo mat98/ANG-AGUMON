@@ -8,13 +8,12 @@ export const ROUTES = [
         children: []
     },
     {
-        icon: 'keyboard_arrow_down',
-        description: 'FrontMons',
+        route: '/working-exp',
+        roles: [],
+        icon: 'person',
+        description: 'Experiência Profissional',
         showMenu: true,
-        collapsed: true,
-        children: [
-            { route: '/detail-project/chapmon', icon: 'computer', description: 'Compra e Venda de ações', showMenu: true },
-        ]
+        children: []
     },
     {
         route: '/teste',
@@ -23,5 +22,14 @@ export const ROUTES = [
         description: 'Contate-Me',
         showMenu: true,
         children: []
+    },
+    {
+        icon: 'keyboard_arrow_down',
+        description: 'FrontMons',
+        showMenu: true,
+        collapsed: true,
+        children: [
+            { route: '/detail-project/chapmon', icon: 'computer', description: 'Compra e Venda de ações', showMenu: true },
+        ]
     },
 ];

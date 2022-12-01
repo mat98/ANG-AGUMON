@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { AuthenticatedLayoutComponent } from './core/components/authenticated-layout/authenticated-layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { registerLocaleData } from '@angular/common';
+import localePT from '@angular/common/locales/pt';
+
+registerLocaleData(localePT);
+
 @NgModule({
   declarations: [
     AppComponent,
