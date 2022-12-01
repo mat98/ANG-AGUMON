@@ -5,7 +5,6 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HorizontalTimelineComponent } from "src/app/core/components/horizontal-timeline/horizontal-timeline.component";
 import { CoreModule } from 'src/app/core/core.module';
-import { SharedModule } from 'src/app/shared/components/shared.module';
 import { ProfessionalExpBodyComponent } from "./components/professional-exp-body/professional-exp-body.component";
 import { ProfessionalExpComponent } from './professional-exp.component';
 

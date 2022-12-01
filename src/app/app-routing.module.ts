@@ -21,6 +21,14 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'detail-project',
+        canActivate: [],
+        loadChildren: () => 
+          import("./pages/detail-project/detail-project.module").then(
+            (m) => m.DetailProjectModule
+          )
+      },
+      {
         path: 'working-exp',
         canActivate: [],
         loadChildren: () =>
@@ -29,13 +37,29 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'detail-project',
+        path: 'certificates',
         canActivate: [],
-        loadChildren: () => 
-          import("./pages/detail-project/detail-project.module").then(
-            (m) => m.DetailProjectModule
-          )
-      }
+        loadChildren: () =>
+          import('./pages/certificates/certificates.module').then(
+            (m) => m.CertificatesModule
+          ),
+      },
+      {
+        path: 'skills',
+        canActivate: [],
+        loadChildren: () =>
+          import('./pages/skills/skills.module').then(
+            (m) => m.SkillsModule
+          ),
+      },
+      {
+        path: '',
+        canActivate: [],
+        loadChildren: () =>
+          import('./pages/professional-exp/working-exp.module').then(
+            (m) => m.WorkingExpModule
+          ),
+      },
     ],
   },
   { path: '**', redirectTo: '' }

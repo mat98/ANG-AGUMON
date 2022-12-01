@@ -16,6 +16,22 @@ export const ROUTES = [
         children: []
     },
     {
+        route: '/skills',
+        roles: [],
+        icon: 'bolt',
+        description: 'Habilidades',
+        showMenu: true,
+        children: []
+    },
+    {
+        route: '/certificates',
+        roles: [],
+        icon: 'badge',
+        description: 'Certificados',
+        showMenu: true,
+        children: []
+    },
+    {
         route: '/teste',
         roles: [],
         icon: 'contacts',
