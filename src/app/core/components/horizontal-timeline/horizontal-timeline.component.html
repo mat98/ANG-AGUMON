@@ -1,13 +1,17 @@
-<div class="timeline">
-  <div *ngFor='let entry of timelineElements;let i = index'>
-    <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
-      <div class="content">
-        <div fxLayout="row" fxLayoutAlign="space-between" class="mr20">
-          <h2>{{entry.title}}</h2>
-          <h2>{{entry.date | date:'longDate' : 'pt-BR'}}</h2>
+<div>
+  <cdk-virtual-scroll-viewport appendOnly itemSize="timelineElements.length" class="scrolling-viewport">
+    <div class="timeline">
+      <div *cdkVirtualFor='let entry of timelineElements;let i = index'>
+        <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
+          <div class="content">
+            <div fxLayout="row" fxLayoutAlign="space-between" class="mr20">
+              <h2>{{entry.title}}</h2>
+              <h2>{{entry.date | date:'shortDate' : 'pt-BR'}}</h2>
+            </div>
+            <p>{{entry.content}}</p>
+          </div>
         </div>
-        <p>{{entry.content}}</p>
       </div>
     </div>
-  </div>
+  </cdk-virtual-scroll-viewport>
 </div>

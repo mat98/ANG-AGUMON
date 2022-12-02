@@ -5,16 +5,27 @@
   margin: 0 auto;
 }
 
+.scrolling-viewport {
+  height: 70vh;
+  width: 100%;
+  margin:0;
+}
+
+
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 8px;
   background-color: white;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 52%;
   margin-left: -3px;
+
+  @media (max-width:801px) {
+    left: 50%;
+  }
 }
 
 .container {

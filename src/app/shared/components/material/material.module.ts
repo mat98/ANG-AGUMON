@@ -29,6 +29,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatRippleModule } from '@angular/material/core';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 const ANGULAR_MATERIAL_MODULES = [
   MatSelectModule,
@@ -58,6 +59,7 @@ const ANGULAR_MATERIAL_MODULES = [
   MatCheckboxModule,
   MatExpansionModule,
   MatRippleModule,
+  ScrollingModule
 ];
 
 @NgModule({

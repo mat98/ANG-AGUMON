@@ -66,6 +66,7 @@ export class ProfessionalExpBodyComponent implements OnInit {
                 title: '7COMm',
                 content: this.content7COMm2,
             },
+            
         ];
     }
 }

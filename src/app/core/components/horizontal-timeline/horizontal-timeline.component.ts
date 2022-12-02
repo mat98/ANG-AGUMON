@@ -1,10 +1,11 @@
-import { Component, Input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
 import { TimelineElement } from "./timeline-element";
 
 @Component({
   selector: 'horizontal-timeline',
   templateUrl: 'horizontal-timeline.component.html',
   styleUrls: ['horizontal-timeline.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class HorizontalTimelineComponent {
