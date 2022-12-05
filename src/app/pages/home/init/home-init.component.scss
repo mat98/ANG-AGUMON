@@ -1,14 +1,15 @@
-
 .main {
     margin: 0;
     height: 100vh;
-    font-family: poppinsMedium;
     padding: 20px;
+    font-family: 'Knewave', cursive;
+    
     // background-image: linear-gradient(to right, rgba(255,0,0,0), #dbd5d5);
 
     h2 {
         font-size: 3.2em;
         color: #0C0B0B;
+
         @media (min-width:1025px) {
             font-size: 6em;
             color: #0C0B0B;
@@ -19,10 +20,11 @@
         text-align: start;
         font-size: 1.2em;
         color: #0C0B0B;
+
         @media (min-width:1025px) {
             font-size: 2em;
             color: #0C0B0B;
-        }
+        } 
     }
 
     span {
@@ -75,6 +77,7 @@
 
 .flip {
     position: relative;
+
     >.front,
     >.back {
         // display: block;
@@ -82,9 +85,11 @@
         transition-duration: .5s;
         transition-property: transform, opacity;
     }
+
     >.front {
         transform: rotateY(0deg);
     }
+
     >.back {
         position: absolute;
         opacity: 0;
@@ -94,23 +99,28 @@
         height: 80%;
         transform: rotateY(-180deg);
     }
+
     &:hover {
         >.front {
             transform: rotateY(180deg);
         }
+
         >.back {
             opacity: 1;
             transform: rotateY(0deg);
         }
     }
+
     &.flip-vertical {
         >.back {
             transform: rotateX(-180deg);
         }
+
         &:hover {
             >.front {
                 transform: rotateX(180deg);
             }
+
             >.back {
                 transform: rotateX(0deg);
             }
@@ -124,16 +134,79 @@
     display: inline-block;
     margin-right: 2px;
     margin-bottom: 1em;
+
     >.back {
-      display: block;
-      color: white;
-      width: inherit;
-      background-size: cover!important;
-      background-position: center!important;
-      padding: 1em 2em;
-      p {
-        font-size: 0.9125rem;
-        color: #999;
+        display: block;
+        color: white;
+        width: inherit;
+        background-size: cover !important;
+        background-position: center !important;
+        padding: 1em 2em;
+
+        p {
+            font-size: 0.9125rem;
+            color: #999;
+        }
+    }
+}
+
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: #405065;
+}
+
+.search-project{
+    padding-bottom: 50px;
+    width: 50%;
+
+    @media (max-width:540px) {
+        width: 90%;
+    }
+}
+
+.form-control {
+    // box-shadow: 0 10px 10px 0 #e4e9ef;
+    // width: 100%;
+    // height: 120%;
+    font-size: 1.4rem;
+    text-align:center;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid black;
+    color: #111;
+    box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
+    height: 58px;    
+    transform: skew(-3deg, 1deg);
+    font-family: 'Knewave', cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    &:focus,
+    &:valid{
+      outline: none;
+      ~ ul li{
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}){
+            &::before{
+              filter: blur(20px);
+              transform: translate(0, -35px) rotate(-210deg);
+            }
+            &::after{
+              filter: blur(0);
+              transform: scale(1) rotate(0);
+            }
+          }
+        }
+        @for $i from 1 through 6{
+          &:nth-child(#{$i}){
+            &::after{
+              transition-delay: 200ms + ($i * 200ms);
+            }
+          }
+        }
       }
     }
 }

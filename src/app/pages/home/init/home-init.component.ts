@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsHome } from '../projects.model';
 
 @Component({
   selector: 'app-home-init',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-init.component.scss'],
 })
 export class HomeInitComponent implements OnInit {
-  public array: any = [
+  projects = [
     {
       nameProject: 'Chapmon',
       routeDetail: 'chapmon',
@@ -16,5 +17,19 @@ export class HomeInitComponent implements OnInit {
     },
   ];
 
-  ngOnInit(): void {}
+  projectsCopy: ProjectsHome[];
+  searchText: string = "";
+
+  constructor() {
+    this.projectsCopy = JSON.parse(JSON.stringify(this.projects))
+  }
+  
+  ngOnInit(): void { }
+
+  find() {
+    // retorna o primeiro indice que pode ser encontrado no array, caso nao tenha item na lista, retorna -1
+    this.projectsCopy = this.projects.filter(item => {
+      return item.nameProject.toLowerCase().indexOf(this.searchText.toLowerCase()) > -1
+    });
+  }
 }

@@ -3,12 +3,17 @@
     <h2>Olá, meu nome é Mateus!</h2>
     <br />
     <app-divider class="mb20 mt20"></app-divider>
-    <span
-      >Segue abaixo a lista dos meus <strong>DigiProjects</strong> e acompanhe
-      suas digievoluções</span
-    >
+    <span>Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado projeto faz sentido para você </span>
 
     <br /><br /><br />
+    <div fxLayoutAlign="center center" fxLayoutAlign.xs="right center">
+      <div class="search-project">
+        <input matInput class="form-control" type="text" name="search" (input)="find()" [(ngModel)]="searchText" autocomplete="off"
+          placeholder="Buscar projetos">
+      </div>
+    </div>
+
+
     <h3>📱 <strong>MobileMons</strong></h3>
     <br />
 
@@ -17,39 +22,22 @@
     </div>
 
     <br /><br /><br />
-    <!-- <app-label text="MObileMOns"></app-label> -->
     <h3>🎨 <strong>FrontMons</strong></h3>
     <br />
 
-    <div
-      fxLayout
-      fxLayout.xs="column wrap"
-      fxLayoutAlign="space-between"
-      fxLayoutWrap="wrap"
-    >
-      <div
-        fxLayout="row wrap"
-        fxLayout.xs="column wrap"
-        fxLayoutWrap="wrap"
-        fxLayoutAlign="space-between left"
-        fxFlex="100%"
-      >
-        <div *ngFor="let item of array; let i = index">
+    <div fxLayout fxLayout.xs="column wrap" fxLayoutAlign="space-between" fxLayoutWrap="wrap">
+      <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutWrap="wrap" fxLayoutAlign="space-between left"
+        fxFlex="100%">
+        <div *ngFor="let project of projectsCopy; let i = index">
           <div class="mb20">
-            <app-image-title-and-subscription
-            [image]="item.img"
-            [text]="item.description"
-            [path]="item.routeDetail"
-            [digivice]="item.digivice"
-          ></app-image-title-and-subscription>
+            <app-image-title-and-subscription [image]="project.img" [text]="project.description" [path]="project.routeDetail"
+              [digivice]="project.digivice"></app-image-title-and-subscription>
           </div>
         </div>
       </div>
     </div>
 
-
     <br /><br /><br />
-    <!-- <app-label text="MObileMOns"></app-label> -->
     <h3>⚙️ <strong>BackMons</strong></h3>
     <br />
 
