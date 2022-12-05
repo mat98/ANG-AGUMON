@@ -1,3 +1,5 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat);
+
 .container {
   padding: 0 20px 0 20px;
 }
@@ -51,7 +53,7 @@ mat-sidenav {
       padding: 10px;
       background-color: var(--color-primary);
       color: #fff;
-      font-family: 'Knewave', cursive;
+      font-family: 'Montserrat', sans-serif;
 
       fa-icon {
           margin-right: 15px;

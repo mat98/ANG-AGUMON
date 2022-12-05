@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(//fonts.googleapis.com/css?family=Montserrat);
 
 @import "./styles/main.scss";
 
@@ -136,9 +137,7 @@ body {
   // background-image:url("assets/images/background.webp");
   margin: 0;
   
-  font-family: 'Knewave', cursive;
-  //  font-family: 'Knewave', cursive;
-  // font-family: 'Knewave', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .main {

@@ -6,10 +6,10 @@
     <span>Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado projeto faz sentido para você </span>
 
     <br /><br /><br />
-    <div fxLayoutAlign="center center" fxLayoutAlign.xs="right center">
+    <div fxLayout="column" fxLayoutAlign="space-around end" fxLayoutAlign.xs="right center">
       <div class="search-project">
         <input matInput class="form-control" type="text" name="search" (input)="find()" [(ngModel)]="searchText" autocomplete="off"
-          placeholder="Buscar projetos">
+          placeholder="Buscar projetos 🔎">
       </div>
     </div>
 

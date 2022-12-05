@@ -1,10 +1,10 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat);
+
 .main {
     margin: 0;
     height: 100vh;
     padding: 20px;
-    font-family: 'Knewave', cursive;
-    
-    // background-image: linear-gradient(to right, rgba(255,0,0,0), #dbd5d5);
+    font-family: 'Montserrat', sans-serif;
 
     h2 {
         font-size: 3.2em;
@@ -24,11 +24,11 @@
         @media (min-width:1025px) {
             font-size: 2em;
             color: #0C0B0B;
-        } 
+        }  
     }
 
     span {
-        font-size: 1.2em;
+        font-size: 1.5em;
         color: #54544E;
     }
 }
@@ -159,7 +159,10 @@
 
 .search-project{
     padding-bottom: 50px;
-    width: 50%;
+    width: 40%;
+    float: right;
+    place-content: stretch flex-end;
+    margin-right: 5%;
 
     @media (max-width:540px) {
         width: 90%;
@@ -179,9 +182,10 @@
     border: 2px solid black;
     color: #111;
     box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
-    height: 58px;    
-    transform: skew(-3deg, 1deg);
-    font-family: 'Knewave', cursive;
+    // border-radius: 5px;
+    height: 10%;    
+    transform: skew(-1deg, 0deg);
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
     &:focus,
