@@ -18,7 +18,7 @@ export class ProfessionalExpBodyComponent implements OnInit {
 
     contentTalent = `Em busca de novos desafios, migrei para uma nova empresa, também sendo uma consultoria atuei junto ao cliente Qualicorp, onde encontrei
   um desafio enorme que seria criar um sistema para venda de planos de saúde, tive meu primeiro contato profissional com tecnologias Mobile, atuando em Flutter,
-  onde me apaixonei por esse mundo ( inclusive meus planos é criar meu portifólio também em um aplicativo), além disso atuei no backend de novos recursos, além do
+  onde me apaixonei por esse mundo, além disso atuei no backend de novos recursos, além do
   site de vendas utilizando o Vuejs.`;
 
     content7COMm2 = `Em construção 👷`;
