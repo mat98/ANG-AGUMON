@@ -164,6 +164,24 @@
     }
 }
 
+#div-image {
+    img {
+        height: 33.5rem;
+
+        @media (min-width:1556px) {
+            height: 34.3rem;
+        }
+
+        @media (max-width:1626px) {
+            height: 33.5rem;
+        }
+
+        @media (min-width:2031px) {
+            height: 35.2rem;
+        }
+    }
+}
+
 // custom
 .flip {
     position: relative;
@@ -202,7 +220,7 @@
     width: 40%;
     float: right;
     place-content: stretch flex-end;
-    margin-right: 5%;
+    margin-right: 10%;
 
     @media (max-width:540px) {
         margin-left: 0px;
@@ -213,9 +231,6 @@
 }
 
 .form-control {
-    // box-shadow: 0 10px 10px 0 #e4e9ef;
-    // width: 100%;
-    // height: 120%;
     font-size: 1.4rem;
     text-align: center;
     width: 100%;
