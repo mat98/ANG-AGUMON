@@ -2,37 +2,42 @@
   <div fxLayout="column wrap" fxLayoutGap="10" class="items_page mt20">
     <div fxLayout="row">
       <div fxFlex="20" fxFlex.sm="45" fxFlex.xs="45">
-        <img
-        src="https://thumbs2.imgbox.com/6e/17/DQL6lIr6_t.jpg"
-        height="450" alt="img" class="teste mt10">
+        <img src="https://thumbs2.imgbox.com/6e/17/DQL6lIr6_t.jpg" height="450" alt="img" class="teste mt10">
       </div>
 
-      <div fxHide.xs fxShow fxFlex="70">
+      <div fxHide.xs fxHide.sm fxShow fxFlex="70">
         <div fxLayout="column wrap">
           <h2 id="title-h2">Olá, meu nome é </h2>
           <h2 id="title-h2-sub">Mateus!</h2>
         </div>
 
         <div fxLayout="column wrap">
-          <span class="span-title mb20">Sou entusiasta na programação e busco por meio dela conquistar minha idependência financeira e com isso pode focar no objetivo de ajudar pessoas de baixa renda a ingressar no mundo da tecnologia e abrir novas oportunidades de crescimento profissional.</span>
+          <span class="span-title mb20">Sou entusiasta na programação e busco por meio dela conquistar minha
+            idependência financeira e com isso pode focar no objetivo de ajudar pessoas de baixa renda a ingressar no
+            mundo da tecnologia e abrir novas oportunidades de crescimento profissional.</span>
           <span class="ml10">Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado
             projeto faz sentido para
             você </span>
 
-          <div class="search-project">
-            <input matInput class="form-control" type="text" name="search" (input)="find()" [(ngModel)]="searchText"
-              autocomplete="off" placeholder="Buscar projetos 🔎">
+          <div fxLayout="row wrap" fxLayoutAlign="end end">
+            <div class="search-project">
+              <input matInput class="form-control" type="text" name="search" (input)="find()" [(ngModel)]="searchText"
+                autocomplete="off" placeholder="Buscar projetos 🔎">
+            </div>
           </div>
+
         </div>
       </div>
     </div>
 
-    <div fxShow.xs fxHide>
+    <div fxShow.xs fxShow.sm fxHide>
       <div fxLayout="column wrap">
         <h2>Olá, meu nome é </h2>
         <h2>Mateus!</h2>
 
-        <span class="mb20">Sou entusiasta na programação e busco por meio dela conquistar minha idependência financeira e com isso pode focar no objetivo de ajudar pessoas de baixa renda a ingressar no mundo da tecnologia e abrir novas oportunidades de crescimento profissional.</span>
+        <span class="mb20">Sou entusiasta na programação e busco por meio dela conquistar minha idependência financeira
+          e com isso pode focar no objetivo de ajudar pessoas de baixa renda a ingressar no mundo da tecnologia e abrir
+          novas oportunidades de crescimento profissional.</span>
         <span>Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado
           projeto faz sentido para
           você </span>

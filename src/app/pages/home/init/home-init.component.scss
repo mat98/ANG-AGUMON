@@ -50,7 +50,6 @@
 }
 
 
-
 .items_page {
     justify-content: center;
     display: flex;
@@ -180,7 +179,9 @@
 
 .search-project {
     margin-top: 40px;
-    margin-left: 300px;
+    align-items: flex-end;
+    justify-content: end;
+    align-content: flex-end;
 
     padding-bottom: 50px;
     width: 40%;
