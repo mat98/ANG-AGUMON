@@ -1,18 +1,44 @@
 <div class="main">
   <div fxLayout="column wrap" fxLayoutGap="10" class="items_page mt20">
-    <h2>Olá, meu nome é Mateus!</h2>
-    <br />
-    <app-divider class="mb20 mt20"></app-divider>
-    <span>Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado projeto faz sentido para você </span>
+    <div fxLayout="row">
+      <img
+        src="https://lh3.googleusercontent.com/aPV3ziTcOwXGMImNx84TDE1VINWoabsPctBCDEmuUIO0hYI4_6aIMhWnrDlSizb1gwrGv-lYTxB0oEgl2X-AalfxpCZEVoN7GYE00CUu2DoNHboE0XQuNl_qBxKFZwNGjvvkRRURp_lXrS4O0j5WX0J-_MYK7_6seahifmmPgxCA43nbmqoS4gY07qJ-NWhIk-JkxJn-iugY0501qFBoKuyOMb4sZLCZuu2JVSQ1kuk8VsDSW6w8T_I1LfRk2slncNMbh2xHKrADkNgsmXSQzWzZGBcngoJyNbqvO5cXDHWudCBuc4Vj671hlIhjl-NxZAc8o21q409WRwBtoSpiwZYGUml6ea8HYkrPSBpdmv2rPu51ul10rFWT7NF3X-TMNaC9CwRNNmOG6CrbRz9D1OsHBaA-pKK75d6YRgNal1UWy89W1CiMER8N1uITykNy2YZ3EbV8Uxf9JHM2dX2vsDvBOSCu2J3lquPjTE74WYI9EyD5cEUktdBz_b4yYZyvBle8lvY5ADtgSAbck0wpyfoNOhuMWZa1sAaXFIZJZqq9AKGFIM2yeC8ZuDoUIjMRPMeZmqp1ww3flI3TIUdkWuyvOcdtDYyqeR0SKMwWZ9mwXKtocrjQx4i4-Gzrjbr1wBOccLCwtJxlklLHXJZmNz9LEeVbga7eTDFVjFfons3jt8KWMeTKyPVXtTBPu7XDsUgwW6gR2H5c8lVXl5nqPG894NHWGgKviH2LcwbxZlp_sQ6q--dommLoB_755iJdsPDA99xfuRrGaYjot7_C3mp-5TZOVadmcmPKKJT8jcsyzU4NfDXNR5eVTybiY2cH8y1DaQSOV7gS6i-Acr__ovmUtCyA-cbFi4D5HXtK--60pm2mUT7HjbLxLQo91zvhEa-C01uNVtEhoYFnF2RaN86EnnwF_7dAhty1THa4QnkA=w737-h919-no?authuser=0"
+        height="450" alt="img" class="teste mt10">
 
-    <br /><br /><br />
-    <div fxLayout="column" fxLayoutAlign="space-around end" fxLayoutAlign.xs="right center">
-      <div class="search-project">
-        <input matInput class="form-control" type="text" name="search" (input)="find()" [(ngModel)]="searchText" autocomplete="off"
-          placeholder="Buscar projetos 🔎">
+      <div fxHide.xs fxShow>
+        <div fxLayout="column wrap">
+          <h2 id="title-h2">Olá, meu nome é </h2>
+          <h2 id="title-h2-sub">Mateus!</h2>
+        </div>
+
+        <div fxLayout="column wrap">
+          <span class="span-title">Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado
+            projeto faz sentido para
+            você </span>
+
+          <div class="search-project">
+            <input matInput class="form-control" type="text" name="search" (input)="find()" [(ngModel)]="searchText"
+              autocomplete="off" placeholder="Buscar projetos 🔎">
+          </div>
+        </div>
       </div>
     </div>
 
+    <div fxShow.xs fxHide>
+      <div fxLayout="column wrap">
+        <h2 >Olá, meu nome é </h2>
+        <h2 >Mateus!</h2>
+      </div>
+
+      <div class="search-project">
+        <input matInput class="form-control" type="text" name="search" (input)="find()" [(ngModel)]="searchText"
+          autocomplete="off" placeholder="Buscar projetos 🔎">
+      </div>
+    </div>
+
+    <br />
+
+    <app-divider></app-divider>
 
     <h3>📱 <strong>MobileMons</strong></h3>
     <br />
@@ -28,10 +54,13 @@
     <div fxLayout fxLayout.xs="column wrap" fxLayoutAlign="space-between" fxLayoutWrap="wrap">
       <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutWrap="wrap" fxLayoutAlign="space-between left"
         fxFlex="100%">
+        <div *ngIf="!projectsCopy.length">
+          <app-label text="Nenhum projeto encontrado"></app-label>
+        </div>
         <div *ngFor="let project of projectsCopy; let i = index">
           <div class="mb20">
-            <app-image-title-and-subscription [image]="project.img" [text]="project.description" [path]="project.routeDetail"
-              [digivice]="project.digivice"></app-image-title-and-subscription>
+            <app-image-title-and-subscription [image]="project.img" [text]="project.description"
+              [path]="project.routeDetail" [digivice]="project.digivice"></app-image-title-and-subscription>
           </div>
         </div>
       </div>

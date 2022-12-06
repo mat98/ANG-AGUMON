@@ -6,13 +6,29 @@
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
 
+    #title-h2 {
+        position: absolute;
+        top: 145px;
+        left: 315px;
+    }
+
+    #title-h2-sub {
+        position: absolute;
+        top: 200px;
+        left: 315px;
+    }
+
+    .teste {
+        border-radius: 10px;
+    }
+
     h2 {
         font-size: 3.2em;
-        color: #0C0B0B;
+        background-color: #39B177;
 
         @media (min-width:1025px) {
             font-size: 6em;
-            color: #0C0B0B;
+            color: #202020;
         }
     }
 
@@ -24,7 +40,7 @@
         @media (min-width:1025px) {
             font-size: 2em;
             color: #0C0B0B;
-        }  
+        }
     }
 
     span {
@@ -157,7 +173,15 @@
     color: #405065;
 }
 
-.search-project{
+.span-title {
+    margin-left: 10px;
+    margin-top: 270px;
+}
+
+.search-project {
+    margin-top: 40px;
+    margin-left: 300px;
+
     padding-bottom: 50px;
     width: 40%;
     float: right;
@@ -165,7 +189,10 @@
     margin-right: 5%;
 
     @media (max-width:540px) {
+        margin-left: 0px;
         width: 90%;
+        margin-right: 10%;
+        place-content: start flex-start;
     }
 }
 
@@ -174,7 +201,7 @@
     // width: 100%;
     // height: 120%;
     font-size: 1.4rem;
-    text-align:center;
+    text-align: center;
     width: 100%;
     display: flex;
     padding: 15px;
@@ -183,34 +210,38 @@
     color: #111;
     box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
     // border-radius: 5px;
-    height: 10%;    
+    height: 10%;
     transform: skew(-1deg, 0deg);
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
+
     &:focus,
-    &:valid{
-      outline: none;
-      ~ ul li{
-        @for $i from 1 through 6 {
-          &:nth-child(#{$i}){
-            &::before{
-              filter: blur(20px);
-              transform: translate(0, -35px) rotate(-210deg);
+    &:valid {
+        outline: none;
+
+        ~ul li {
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                    &::before {
+                        filter: blur(20px);
+                        transform: translate(0, -35px) rotate(-210deg);
+                    }
+
+                    &::after {
+                        filter: blur(0);
+                        transform: scale(1) rotate(0);
+                    }
+                }
             }
-            &::after{
-              filter: blur(0);
-              transform: scale(1) rotate(0);
+
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                    &::after {
+                        transition-delay: 200ms + ($i * 200ms);
+                    }
+                }
             }
-          }
         }
-        @for $i from 1 through 6{
-          &:nth-child(#{$i}){
-            &::after{
-              transition-delay: 200ms + ($i * 200ms);
-            }
-          }
-        }
-      }
     }
 }
