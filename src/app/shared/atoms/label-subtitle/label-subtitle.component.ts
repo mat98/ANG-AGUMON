@@ -9,6 +9,7 @@ export class LabelSubtitleComponent {
     _text: string = "";
 
     @Input() text: string | undefined;
+    @Input() color: string = "";
 
     ngOnInit() {
         if (this.text) this._text = this.text;

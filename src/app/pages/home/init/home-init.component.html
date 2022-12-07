@@ -1,27 +1,27 @@
 <div class="main">
   <div fxLayout="column">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="right center">
-      <div fxFlex="100" id="div-head" style="background-color: #1f4954; height: 60%;">
+      <div fxFlex="100" id="div-head" style="height: 90%;">
         <div fxLayout="column wrap" class="mt40">
-          <h2 id="title-h2" class="mb20">Olá, seja bem-vindo sou o</h2>
-          <h2 id="title-h2-sub">Mateus!</h2>
+          <h2 id="title-h2" class="mb20">Sobre mim</h2>
         </div>
         <hr>
 
         <div fxLayout="column wrap" id="div-info-head">
-          <span class="span-title mb20">Sou entusiasta na programação e busco por meio dela <strong>ajudar pessoas de
+          <span class="span-title mb20 mr20">Sou entusiasta na programação e busco por meio dela <strong>ajudar pessoas
+              de
               baixa renda</strong> a ingressar no mundo da tecnologia e abrir novas oportunidades de crescimento
             profissional.</span>
-          <span class="ml10 mt20">Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado
+          <span class="ml10 mt80">Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado
             projeto faz sentido para
             você </span>
 
-          <div fxLayout="row wrap" fxLayoutAlign="end end">
+          <!-- <div fxLayout="row wrap" fxLayoutAlign="start start">
             <div class="search-project mt80">
               <input matInput class="form-control" type="text" name="search" (input)="find()" [(ngModel)]="searchText"
                 autocomplete="off" placeholder="Buscar projetos 🔎">
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -31,43 +31,58 @@
 
     </div>
 
-    <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
-      <div id="div-group-projects" class="frontmons" fxLayout="column" fxFlex="50">
-        <h3><strong><app-label text="🎨 FrontMons" color="white"></app-label></strong></h3>
-        <br />
+    <div class="teste">
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div class="search-project mt30">
+          <input matInput class="form-control" type="text" name="search" (input)="find()" [(ngModel)]="searchText"
+            autocomplete="off" placeholder="Buscar projetos 🔎">
+        </div>
+      </div>
+      <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+        <div id="div-group-projects" fxLayout="column" fxFlex="50">
+          <h3><strong>
+              <app-label text="🎨 FrontMons" color="white"></app-label>
+            </strong></h3>
+          <br />
 
-        <div fxLayout fxLayout.xs="column wrap" fxLayoutWrap="wrap">
-          <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutWrap="wrap" fxLayoutAlign="space-between left"
-            fxFlex="100%">
-            <div *ngIf="!projectsCopy.length">
-              <app-label text="Nenhum projeto encontrado"></app-label>
-            </div>
-            <div *ngFor="let project of projectsCopy; let i = index">
-              <div class="mb20">
-                <app-image-title-and-subscription [image]="project.img" [text]="project.description"
-                  [path]="project.routeDetail" [digivice]="project.digivice"></app-image-title-and-subscription>
+          <div fxLayout fxLayout.xs="column wrap" fxLayoutWrap="wrap">
+            <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutWrap="wrap" fxLayoutAlign="space-between left"
+              fxFlex="100%">
+              <div *ngIf="!projectsCopy.length">
+                <app-label text="Nenhum projeto encontrado"></app-label>
+              </div>
+              <div *ngFor="let project of projectsCopy; let i = index">
+                <div class="mb20">
+                  <app-image-title-and-subscription [image]="project.img" [text]="project.description"
+                    [path]="project.routeDetail" [digivice]="project.digivice"></app-image-title-and-subscription>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div id="div-group-projects" class="mobilemons" fxLayout="column" fxFlex="50">
-        <h3><strong><app-label text="📱 MobileMons" color="white"></app-label></strong></h3>
-        <br />
-        <div class="mb20">
-          <app-label text="Nenhum projeto cadastrado" color="white"></app-label>
+        <div id="div-group-projects" fxLayout="column" fxFlex="50">
+          <h3><strong>
+              <app-label text="📱 MobileMons" color="white"></app-label>
+            </strong></h3>
+          <br />
+          <div class="mb20">
+            <app-label text="Nenhum projeto cadastrado" color="white"></app-label>
+          </div>
         </div>
       </div>
 
-      <div id="div-group-projects" class="backmons" fxLayout="column" fxFlex="100">
-        <h3><strong><app-label text="⚙️ Backmons" color="white"></app-label></strong></h3>
-        <br />
-
-        <div class="mb20">
-          <app-label text="Nenhum projeto cadastrado" color="white"></app-label>
+      <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+        <div id="div-group-projects" fxLayout="column" fxFlex="100">
+          <h3><strong><app-label text="⚙️ Backmons" color="white"></app-label></strong></h3>
+          <br />
+    
+          <div class="mb20">
+            <app-label text="Nenhum projeto cadastrado" color="white"></app-label>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 </div>

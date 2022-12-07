@@ -1,16 +1,17 @@
 @import url(//fonts.googleapis.com/css?family=Montserrat);
 
 .main {
+    background-color: #13131f;
     margin: 0;
-    height: 100vh;
+    height: auto;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
 
     #title-h2 {
         // position: absolute;
         // top: 90px;
-        width: 70rem;
-        color: #F2F1F4;
+        width: 50rem;
+        color: #FFFF;
         text-shadow: rgb(31, 31, 31) 0.1em 0.1em 0.2em;
 
         @media (max-width:800px) {
@@ -21,8 +22,8 @@
     #title-h2-sub {
         // position: absolute;
         // top: 300;
+        color: #FFFF;
         width: 35%;
-        color: #F2F1F4;
         text-shadow: rgb(31, 31, 31) 0.1em 0.1em 0.2em;
 
         @media (max-width:800px) {
@@ -154,6 +155,13 @@
     span {
         color: #FFFF;
     }
+
+    .span-title {
+        margin-left: 10px;
+        margin-top: 3%;
+        font-size: 3rem;
+        line-height: 1;
+    }
 }
 
 #div-head {
@@ -171,17 +179,17 @@
 
 .frontmons {
     background-color: #00a0a0;
-    background-image: linear-gradient(62deg, #00a0a0 80%, #F0F0F0  100%);
+    // background-image: linear-gradient(62deg, #00a0a0 80%, #F0F0F0  100%);
 }
 
 .mobilemons {
     background-color: #006666;
-    background-image: linear-gradient(62deg, #006666 80%, #F0F0F0  100%);
+    // background-image: linear-gradient(62deg, #006666 80%, #F0F0F0 100%);
 }
 
 .backmons {
     background-color: #202020;
-    background-image: linear-gradient(62deg, #202020 80%, #F7CE68 100%);
+    // background-image: linear-gradient(62deg, #202020 80%, #F7CE68 100%);
 
 }
 
@@ -193,24 +201,28 @@
         margin: 0px auto;
         margin: 0;
         height: 30.2rem;
+        border-radius: 5%;
 
         @media (min-width:1556px) {
-            height: 33.7rem;
+            height: 27.2rem;
         }
 
         @media (max-width:1626px) {
-            height: 33.2rem;
+            height: 80.2rem;
         }
 
         @media (min-width:2031px) {
-            height: 35.2rem;
+            height: 50.2rem;
         }
     }
+
 }
 
-.span-title {
-    margin-left: 10px;
-    margin-top: 3%;
+.teste {
+    padding: 20px;
+    margin-top: 10px;
+    background-color: rgba(83,83,83,0.1);
+    border-radius: 30px;
 }
 
 .search-project {
@@ -236,7 +248,7 @@
     padding: 15px;
     background-color: white;
     border: 2px solid black;
-    color: #111;
+    color: white;
     box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
     // border-radius: 5px;
     height: 10%;
@@ -244,6 +256,10 @@
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    @media (max-width:800px) {
+        font-size: 0.9rem;
+    }
 
     &:focus,
     &:valid {
