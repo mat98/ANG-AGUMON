@@ -17,12 +17,17 @@
   }
 
   @media (max-width: 700px) {
-    height: calc(100vh - 670px);
+    height: calc(100vh - 325px);
     width: auto;
   }
 
   @media (max-width: 400px) {
     height: calc(100vh - 580px);
+    width: auto;
+  }
+
+  @media (max-width: 230px) {
+    height: calc(100vh - 660px);
     width: auto;
   }
 }
