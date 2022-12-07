@@ -1,7 +1,7 @@
 <div class="main">
-  <div fxLayout="column wrap" fxLayoutGap="10" class="items_page mt20">
+  <div fxLayout="column">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="right center">
-      <div fxFlex="90" id="div-head" style="background-color: #1f4954; height: 50%;">
+      <div fxFlex="100" id="div-head" style="background-color: #1f4954; height: 60%;">
         <div fxLayout="column wrap" class="mt40">
           <h2 id="title-h2" class="mb20">Olá, seja bem-vindo sou o</h2>
           <h2 id="title-h2-sub">Mateus!</h2>
@@ -25,44 +25,51 @@
         </div>
       </div>
 
-      <div id="div-image" fxHide.xs fxHide.sm fxShow>
+      <div id="div-image" fxHide.xs fxHide.sm fxHide.md fxShow>
         <img src="https://thumbs2.imgbox.com/6e/17/DQL6lIr6_t.jpg" alt="img">
       </div>
 
     </div>
 
-    <h3>📱 <strong>MobileMons</strong></h3>
-    <br />
-
-    <div>
-      <app-label text="Nenhum projeto cadastrado"></app-label>
-    </div>
-
-    <br /><br /><br />
-    <h3>🎨 <strong>FrontMons</strong></h3>
-    <br />
-
-    <div fxLayout fxLayout.xs="column wrap" fxLayoutAlign="space-between" fxLayoutWrap="wrap">
-      <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutWrap="wrap" fxLayoutAlign="space-between left"
-        fxFlex="100%">
-        <div *ngIf="!projectsCopy.length">
-          <app-label text="Nenhum projeto encontrado"></app-label>
+    <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+      <div fxLayout="column" fxFlex="50" style="background-color: #7AB6D9">
+        <h3>📱 <strong>MobileMons</strong></h3>
+        <br />
+        <div class="mb20">
+          <app-label text="Nenhum projeto cadastrado"></app-label>
         </div>
-        <div *ngFor="let project of projectsCopy; let i = index">
-          <div class="mb20">
-            <app-image-title-and-subscription [image]="project.img" [text]="project.description"
-              [path]="project.routeDetail" [digivice]="project.digivice"></app-image-title-and-subscription>
+      </div>
+
+      <div id="div-group-projects" fxLayout="column" fxFlex="50" style="background-color: #1fb8ab">
+        <h3>🎨 <strong>FrontMons</strong></h3>
+        <br />
+
+        <div fxLayout fxLayout.xs="column wrap" fxLayoutWrap="wrap">
+          <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutWrap="wrap" fxLayoutAlign="space-between left"
+            fxFlex="100%">
+            <div *ngIf="!projectsCopy.length">
+              <app-label text="Nenhum projeto encontrado"></app-label>
+            </div>
+            <div *ngFor="let project of projectsCopy; let i = index">
+              <div class="mb20">
+                <app-image-title-and-subscription [image]="project.img" [text]="project.description"
+                  [path]="project.routeDetail" [digivice]="project.digivice"></app-image-title-and-subscription>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <br /><br /><br />
-    <h3>⚙️ <strong>BackMons</strong></h3>
-    <br />
+    <div fxLayout="row">
+      <div fxLayout="column" fxFlex="100" style="background-color: #202020">
+        <h3><strong><app-label text="⚙️ Backmons" color="white"></app-label></strong></h3>
+        <br />
 
-    <div>
-      <app-label text="Nenhum projeto cadastrado"></app-label>
+        <div class="mb20">
+          <app-label text="Nenhum projeto cadastrado" color="white"></app-label>
+        </div>
+      </div>
     </div>
   </div>
 </div>
