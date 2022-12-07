@@ -8,11 +8,11 @@
         <hr>
 
         <div fxLayout="column wrap" id="div-info-head">
-          <span class="span-title mb20 mr20">Sou entusiasta na programação e busco por meio dela <strong>ajudar pessoas
+          <span class="span-title mb20 mr20 ml20 mr20">Sou entusiasta na programação e busco por meio dela <strong>ajudar pessoas
               de
               baixa renda</strong> a ingressar no mundo da tecnologia e abrir novas oportunidades de crescimento
             profissional.</span>
-          <span class="span-title ml10 mt80">Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado
+          <span class="span-title ml20 mr20 mt80">Segue abaixo a lista dos meus <strong>DigiProjects</strong> e veja se determinado
             projeto faz sentido para
             você </span>
 
@@ -49,7 +49,7 @@
             <div fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutWrap="wrap" fxLayoutAlign="space-between left"
               fxFlex="100%">
               <div *ngIf="!projectsCopy.length">
-                <app-label text="Nenhum projeto encontrado"></app-label>
+                <app-label color="white" text="Nenhum projeto encontrado"></app-label>
               </div>
               <div *ngFor="let project of projectsCopy; let i = index">
                 <div class="mb20">
