@@ -161,7 +161,16 @@
         margin-top: 3%;
         font-size: 3rem;
         line-height: 1;
+
+        @media (max-width:1166px) {
+            font-size: 2rem;
+        }
+
+        @media (max-width:730px) {
+            font-size: 1.6rem;
+        }
     }
+
 }
 
 #div-head {
@@ -221,7 +230,7 @@
 .teste {
     padding: 20px;
     margin-top: 10px;
-    background-color: rgba(83,83,83,0.1);
+    background-color: rgba(83, 83, 83, 0.1);
     border-radius: 30px;
 }
 
