@@ -1,7 +1,11 @@
-.title {
+span {
     font-size: 2em;
+    font-style: italic;
+    width: 100%;
 
-    @media (min-width:801px) {
+    // white
+    @media (min-width:1025px) {
         font-size: 3em;
+        // width: 50%;
     }
 }
