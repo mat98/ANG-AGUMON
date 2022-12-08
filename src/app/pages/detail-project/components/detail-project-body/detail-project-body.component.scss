@@ -25,11 +25,18 @@ mat-card {
 
 #group-images {
     width:  100%;
+    display: flex;
     border-radius: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgba(83, 83, 83, 0.1);
+    padding: 2%;
+    margin-bottom: 20px;
+    overflow-x: auto;
+
 }
 
-.teste{
-    background-color: white;
+#group-images::-webkit-scrollbar{
+    width:0;
 }
 
 app-button {

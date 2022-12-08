@@ -1,11 +1,9 @@
 <div class="main">
   <div class="main-body" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="50">
-    <div class="container-space">
+    <div fxLayout="column" class="container-space">
       <form>
-        <div [formGroup]="form">
-          <div class="row mb20">
-            <span class="title-span">{{ contactMe }}</span>
-          </div>
+        <div fxLayout="column" [formGroup]="form">
+          <app-label [text]="contactMe" color="white" class="mb50" size="1.5em"></app-label>
 
           <info-contact-org name="{{formDescription.name}}" email="{{formDescription.emailAddress}}"
             subject="{{formDescription.subjectContact}}" message="{{formDescription.messageContact}}"
@@ -14,10 +12,8 @@
         </div>
       </form>
     </div>
-    <div class="container-space">
-      <div class="row">
-        <span class="title-span">{{ labelMap }}</span>
-      </div>
+    <div fxLayout="column" class="container-space">
+      <app-label [text]="labelMap" color="white" class="mb10 mt10" size="1.5em"></app-label>
       <app-map></app-map>
     </div>
   </div>

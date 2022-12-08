@@ -1,3 +1,4 @@
+import { LabelModule } from './../../shared/atoms/label/label.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactMeInitComponent } from './init/contact-me-init.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     RouterModule,
     SharedModule,
+    LabelModule,
     InformationContactOrgModule
   ],
   declarations: [ContactMeInitComponent],

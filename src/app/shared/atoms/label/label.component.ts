@@ -8,4 +8,5 @@ import { Component, Input } from "@angular/core";
 export class LabelComponent{
     @Input() text: string | undefined;
     @Input() color: string = "";
+    @Input() size: string = "";
 }
