@@ -9,7 +9,6 @@ export class ButtonComponent {
     _label: string = "";
 
     @Input() label: string | undefined;
-    @Input() color: string = "primary";
     @Output() handlerBtn: EventEmitter<any> = new EventEmitter()
 
     ngOnInit() {
