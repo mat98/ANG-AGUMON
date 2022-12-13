@@ -20,7 +20,11 @@ round-progress {
 }
 
 mat-card {
-    max-width: 30rem;
+    max-width: 30vh;
+
+    @media (max-width:900px) {
+        max-width: auto;
+    }
 }
 
 #group-images {

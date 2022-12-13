@@ -51,7 +51,7 @@ mat-sidenav {
       box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(244 67 54 / 40%);
       width: 100%;
       padding: 10px;
-      background-color: var(--color-primary);
+      background-color: #1fb8ab;
       color: #fff;
       font-family: 'Montserrat', sans-serif;
 
@@ -62,7 +62,7 @@ mat-sidenav {
       }
 
       &:hover {
-          background-color: var(--color-primary);
+        background-color: #1fb8ab;
       }
   }
 

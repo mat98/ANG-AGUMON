@@ -10,11 +10,11 @@
 }
 
 img {
-    width: 20rem;
+    width: 12vh;
     opacity: 0.9;
     filter: drop-shadow(0 0 0.9rem #29274c);
 
     @media (max-width:801px) {
-        width: 8rem;
+        width: 10vh;
     }
 }
