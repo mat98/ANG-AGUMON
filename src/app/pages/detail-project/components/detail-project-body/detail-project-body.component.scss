@@ -3,7 +3,7 @@
     padding: 40px;
 }
 
-.progress-wrapper {
+#div-progress-wrapper {
     position: relative;
     width: 10rem;
 }
@@ -20,7 +20,7 @@ round-progress {
 }
 
 mat-card {
-    width: 20rem;
+    max-width: 30rem;
 }
 
 #group-images {

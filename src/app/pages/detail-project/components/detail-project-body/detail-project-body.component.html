@@ -26,33 +26,37 @@
         <div fxLayout="column">
             <app-label-subtitle text="Versões do projeto" color="white" class="mt20 mb20"></app-label-subtitle>
             <app-divider class="mb20"></app-divider>
-            <mat-card fxLayout="column">
-                <div fxLayout="row" fxLayoutAlign="space-between">
-                    <strong>
-                        <app-label text="V0.01" class="mr10"></app-label>
-                    </strong>
-                    <a href="https://github.com/mat98/VUE-CHAPMON/releases/tag/0.1" target="_blank">
-                        <mat-icon class="icon">download</mat-icon>
-                    </a>
-                </div>
-                <app-label text="- Criação da tela de informações básicas e de saldo" class="mb10"></app-label>
-                <app-label text="- Criação da tela de compra de ações" class="mb10"></app-label>
-                <app-label text="- Criação da tela de venda de ações" class="mb20"></app-label>
-                <div fxLayout="row">
-                    <div class="progress-wrapper mr20" fxLayout="column">
-                        <strong>Frontend:</strong>
-                        <div class="current" [ngStyle]="getOverlayStyle('#1fb8ab')">{{ "🖼️ " + currentFront +"%"}}
+            <mat-card>
+                <mat-card-content>
+                    <div fxLayout="column">
+                        <div fxLayout="row" fxLayoutAlign="space-between">
+                            <strong>
+                                <app-label text="V0.01" class="mr10"></app-label>
+                            </strong>
+                            <a href="https://github.com/mat98/VUE-CHAPMON/releases/tag/0.1" target="_blank">
+                                <mat-icon class="icon">download</mat-icon>
+                            </a>
                         </div>
-                        <round-progress color="#1fb8ab" [current]="currentFront" [stroke]="20" [max]="max"
-                            [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
+                        <app-label text="- Criação da tela de informações básicas e de saldo" class="mb10"></app-label>
+                        <app-label text="- Criação da tela de compra de ações" class="mb10"></app-label>
+                        <app-label text="- Criação da tela de venda de ações" class="mb20"></app-label>
+                        <div fxLayout="row">
+                            <div id="div-progress-wrapper" fxLayout="column">
+                                <strong>Frontend:</strong>
+                                <div class="current" [ngStyle]="getOverlayStyle('#1fb8ab')">{{ currentFront +"%"}}
+                                </div>
+                                <round-progress color="#1fb8ab" [current]="currentFront" [stroke]="20" [max]="max"
+                                    [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
+                            </div>
+                            <div id="div-progress-wrapper" fxLayout="column">
+                                <strong>Backend:</strong>
+                                <div class="current" [ngStyle]="getOverlayStyle('#635994')">{{ currentBack +"%" }}</div>
+                                <round-progress color="#635994" [current]="currentBack" [stroke]="20" [max]="max"
+                                    [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
+                            </div>
+                        </div>
                     </div>
-                    <div class="progress-wrapper mr20" fxLayout="column">
-                        <strong>Backend:</strong>
-                        <div class="current" [ngStyle]="getOverlayStyle('#635994')">{{ "🔙 " + currentBack +"%" }}</div>
-                        <round-progress color="#635994" [current]="currentBack" [stroke]="20" [max]="max"
-                            [semicircle]="true" [responsive]="true" [duration]="800"></round-progress>
-                    </div>
-                </div>
+                </mat-card-content>
             </mat-card>
 
         </div>
