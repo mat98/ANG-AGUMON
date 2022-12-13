@@ -1,20 +1,21 @@
 <div class="main">
   <div class="main-body" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="50">
-    <div fxLayout="column" class="container-space">
+    <div fxLayout="column" fxLayoutAlign="center" class="container-space">
       <form>
         <div fxLayout="column" [formGroup]="form">
           <app-label [text]="contactMe" color="white" class="mb50 mt40" size="1.5em"></app-label>
 
-          <info-contact-org name="{{formDescription.name}}" email="{{formDescription.emailAddress}}"
+          <info-contact-org class="mb20" name="{{formDescription.name}}" email="{{formDescription.emailAddress}}"
             subject="{{formDescription.subjectContact}}" message="{{formDescription.messageContact}}"
             sendMessage="Enviar Mensagem">
           </info-contact-org>
         </div>
       </form>
     </div>
-    <div fxLayout="column" class="container-space">
-      <app-label [text]="labelMap" color="white" class="mb10 mt10" size="1.5em"></app-label>
+    <div fxLayout="column" fxLayoutAlign="center" class="container-space">
+      <app-label [text]="labelMap" color="white" class="mb10 mt20" size="1.5em"></app-label>
       <app-map></app-map>
+      <div class="mb20"></div>
     </div>
   </div>
   <app-footer></app-footer>
