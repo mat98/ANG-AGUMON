@@ -1,5 +1,5 @@
 div {
-    background-color: #1fb8ab;
+    background-color: #13131f;
 }
 
 #main {
@@ -9,7 +9,7 @@ div {
 
 .circleText {
     padding: 10px;
-    border: 1px solid #202020;
+    border: 1px solid whitesmoke;
     border-radius: 50px;
 }
 
@@ -32,7 +32,7 @@ div {
     top: 50%;
     width: 9999px;
     height: 1px;
-    background: #202020;
+    background: whitesmoke;
 }
 
 .divider>span:before {
@@ -43,4 +43,16 @@ div {
 .divider>span:after {
     left: 100%;
     margin-left: 15px;
+}
+
+strong {
+    color: white;
+}
+
+mat-icon {
+    color: #FFFF;
+}
+
+span {
+    color: whitesmoke;
 }
