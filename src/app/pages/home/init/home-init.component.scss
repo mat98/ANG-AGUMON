@@ -214,15 +214,11 @@
         border-radius: 5%;
 
         @media (min-width:1556px) {
-            height: 27.2rem;
+            height: calc(100vh - 500px);
         }
 
-        @media (max-width:1626px) {
-            height: 80.2rem;
-        }
-
-        @media (min-width:2031px) {
-            height: 50.2rem;
+        @media (min-width:1626px) {
+            height: calc(100vh - 500px);
         }
     }
 

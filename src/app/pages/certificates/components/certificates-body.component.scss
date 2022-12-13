@@ -1,0 +1,20 @@
+.main {
+    margin: 0;
+    padding: 0;
+}
+
+.recurse {
+    width: 50%;
+    height: 30vh;
+    cursor: pointer;
+}
+
+img {
+    width: 20rem;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 0.9rem #29274c);
+
+    @media (max-width:801px) {
+        width: 8rem;
+    }
+}
