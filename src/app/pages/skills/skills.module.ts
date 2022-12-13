@@ -1,3 +1,4 @@
+import { LabelModule } from './../../shared/atoms/label/label.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -6,6 +7,7 @@ import { DividerModule } from 'src/app/shared/atoms/divider/divider.module';
 import { LabelSubtitleModule } from 'src/app/shared/atoms/label-subtitle/label-subtitle.module';
 import { SkillsBodyComponent } from './components/skills-body.component';
 import { SkillsComponent } from './skills.component';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
 const routes: Routes = [
     {
@@ -21,7 +23,9 @@ const routes: Routes = [
         RouterModule,
         CommonModule,
         LabelSubtitleModule,
-        DividerModule
+        DividerModule,
+        LabelModule,
+        RoundProgressModule
     ],
     declarations: [SkillsComponent, SkillsBodyComponent],
 })

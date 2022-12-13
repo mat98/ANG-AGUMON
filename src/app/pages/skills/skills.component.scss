@@ -7,4 +7,25 @@
 .main-body {
     padding: 20px !important;
     min-height: 80vh;
+
+    #div-skills {
+        padding: 20px;
+        margin-top: 10px;
+        background-color: rgba(83, 83, 83, 0.1);
+        border-radius: 30px;
+    }
+}
+
+#progress-with-text {
+    position: relative;
+    width: 10rem;
+}
+
+h2 {
+    color: #FFFFFF;
+    font-size: 5em;
+}
+
+app-label {
+    color: #FFFFFF;
 }
