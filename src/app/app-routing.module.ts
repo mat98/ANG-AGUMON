@@ -1,6 +1,7 @@
 import { AuthenticatedLayoutComponent } from './core/components/authenticated-layout/authenticated-layout.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CertificatesModule } from './pages/certificates/certificates.module';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
         loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule)
       },
       {
-        path: 'teste',
+        path: 'contact-me',
         canActivate: [],
         loadChildren: () =>
           import('./pages/contact-me/contact-me.module').then(
@@ -23,7 +24,7 @@ const routes: Routes = [
       {
         path: 'detail-project',
         canActivate: [],
-        loadChildren: () => 
+        loadChildren: () =>
           import("./pages/detail-project/detail-project.module").then(
             (m) => m.DetailProjectModule
           )

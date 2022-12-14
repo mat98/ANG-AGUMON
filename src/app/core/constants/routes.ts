@@ -32,7 +32,7 @@ export const ROUTES = [
         children: []
     },
     {
-        route: '/teste',
+        route: '/contact-me',
         roles: [],
         icon: 'contacts',
         description: 'Contate-Me',

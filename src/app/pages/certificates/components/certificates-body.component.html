@@ -1,36 +1,73 @@
-<div class="main" fxLayout="column">
-    <div fxLayout="row">
-        <div class="recurse" fxLayout="column" style="background-color: #732a6f" fxLayoutAlign="center center">
-            <img src="https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png"
-                alt="img">
-            <app-label-subtitle text="C#" color="white"></app-label-subtitle>
+<main class="main" fxLayout="row">
+    <!-- <div>
+        <span style="color: #FFFF">{{enabledDetail}}</span>
+    </div> -->
+    <section fxLayout="column" fxLayoutAlign="center center"
+        *ngFor="let item of items; let i = index;" class="recourse">
+        <div class="close-section" (click)="closeDetail()">&times;</div>
+        <div *ngIf="item.enabledDetail === false && checkDetail()">
+            <div class="demo-box" (click)="handleEnabledDetail(item)" fxLayout="column" fxLayoutAlign="center center">
+                <img [src]="item.img" alt="img">
+                <app-label-subtitle [text]="item.text"></app-label-subtitle>
+            </div>
         </div>
-        <div class="recurse" fxLayout="column" style="background-color: #b70029;" fxLayoutAlign="center center">
+
+        <div *ngIf="item.enabledDetail" class="teste">
+            <app-detail-certificate [recourse]="item.text"></app-detail-certificate>
+        </div>
+    </section>
+
+    <!-- <section class="recourse" fxLayout="column" fxLayoutAlign="center center">
+        <div class="close-section" (click)="handleEnabledDetail()">&times;</div>
+        <div *ngIf="enabledDetail[1] === false">
+            <div class="demo-box" (click)="handleEnabledDetail(1)" fxLayout="column" fxLayoutAlign="center center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png"
+                    alt="img">
+                <app-label-subtitle text="Angular"></app-label-subtitle>
+            </div>
+        </div>
+
+        <div *ngIf="enabledDetail[1]" class="teste">
+            <app-detail-certificate recourse="angular"></app-detail-certificate>
+        </div>
+    </section> -->
+
+    <!-- <section class="recourse" fxLayout="column" fxLayoutAlign="center center">
+        <div class="demo-box">
+            <app-detail-certificate></app-detail-certificate>
+        </div>
+    </section> -->
+    <!-- <div class="recourse" fxLayout="column" style="background-color: #b70029;" fxLayoutAlign="center center"
+            (click)="navigateCertificate('angular')">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png"
                 alt="img">
             <app-label-subtitle text="Angular" color="white"></app-label-subtitle>
-        </div>
-    </div>
-    <div fxLayout="row">
-        <div class="recurse" fxLayout="column" style="background-color: #45d1fd;" fxLayoutAlign="center center">
+        </div> -->
+
+    <!-- <div fxLayout="row">
+        <div class="recourse" fxLayout="column" style="background-color: #45d1fd;" fxLayoutAlign="center center"
+            (click)="navigateCertificate('flutter')">
             <img src="https://archive.org/download/github.com-flutter-flutter_-_2022-02-08_11-18-30/cover.jpg"
                 alt="img">
             <app-label-subtitle text="Flutter" color="white"></app-label-subtitle>
         </div>
-        <div class="recurse" fxLayout="column" style="background-color: #90c53f;" fxLayoutAlign="center center">
+        <div class="recourse" fxLayout="column" style="background-color: #90c53f;" fxLayoutAlign="center center"
+            (click)="navigateCertificate('nodejs')">
             <img src="https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png" alt="img">
             <app-label-subtitle text="Nodejs" color="white"></app-label-subtitle>
         </div>
     </div>
     <div fxLayout="row">
-        <div class="recurse" fxLayout="column" style="background-color: #399d79;" fxLayoutAlign="center center">
+        <div class="recourse" fxLayout="column" style="background-color: #399d79;" fxLayoutAlign="center center"
+            (click)="navigateCertificate('vuejs')">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
                 alt="img">
             <app-label-subtitle text="Vuejs" color="white"></app-label-subtitle>
         </div>
-        <div class="recurse" fxLayout="column" style="background-color: #e0081c;" fxLayoutAlign="center center">
+        <div class="recourse" fxLayout="column" style="background-color: #e0081c;" fxLayoutAlign="center center"
+            (click)="navigateCertificate('corda')">
             <img src="https://s3.cointelegraph.com/storage/uploads/view/df72564418f401cce36ff1f3329126cd.png" alt="img">
             <app-label-subtitle text="R3 Corda" color="white"></app-label-subtitle>
         </div>
-    </div>
-</div>
+    </div> -->
+</main>
