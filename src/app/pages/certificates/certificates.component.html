@@ -1,4 +1,9 @@
 <div>
-    <app-certificates-body></app-certificates-body>
+    <!-- <ngx-skeleton-loader *ngIf="isLoadingSk" count="1" [theme]="{ 'border-radius': '10', height: '50px' }">
+    </ngx-skeleton-loader> -->
+    
+    <div *ngIf="!isLoading">
+        <app-certificates-body [certificateInfo]="certificateInfo"></app-certificates-body>
+    </div>
     <app-footer></app-footer>
 </div>

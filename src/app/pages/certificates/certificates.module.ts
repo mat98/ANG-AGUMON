@@ -1,3 +1,6 @@
+import { CertificateModel } from './certificates.model';
+import { CertificateService } from './certificates.service';
+import { LabelModule } from './../../shared/atoms/label/label.module';
 import { CertificatesComponent } from './certificates.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -25,10 +28,12 @@ const routes: Routes = [
         RouterModule.forChild(routes),
         RouterModule,
         CommonModule,
+        LabelModule,
         LabelSubtitleModule,
-        DividerModule
+        DividerModule,
     ],
     declarations: [CertificatesComponent, DetailCertificateComponent, CertificatesBodyComponent],
+    providers: [CertificateService]
 })
 
 export class CertificatesModule { }

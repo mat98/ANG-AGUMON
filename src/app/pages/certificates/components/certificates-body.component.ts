@@ -1,5 +1,6 @@
-import { ChangeDetectorRef, Component, ElementRef, OnInit } from "@angular/core";
+import { ChangeDetectorRef, Component, ElementRef, Input, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { CertificateItem } from "../certificates.model";
 
 @Component({
     selector: 'app-certificates-body',
@@ -11,19 +12,20 @@ export class CertificatesBodyComponent implements OnInit {
     isLoading: boolean = false;
     items = [
         {
-            'id': 1,
+            'id': 0,
             'img': "https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png",
             'text': 'dotnet',
             'enabledDetail': false
         },
         {
-            'id': 2,
+            'id': 1,
             'img': "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png",
             'text': 'angular',
-            'enabledDetail': false
+            'enabledDetail': true
         }
-
     ]
+    detailEnabled = true;
+    @Input() certificateInfo!: CertificateItem;
 
     constructor(private _router: Router, private elementRef: ElementRef, private changeDetection: ChangeDetectorRef) {
     }
@@ -75,13 +77,37 @@ export class CertificatesBodyComponent implements OnInit {
 
     handleEnabledDetail(item: any): void {
         item.enabledDetail = !item.enabledDetail;
+        this.changeDetection.detectChanges();
     }
 
-    closeDetail():void {
-        this.items.map(i => i.enabledDetail = false);
+    handleSectionEnabled(index: number): boolean {
+        let allFalse: boolean = this.items.every(i => i.enabledDetail === false);
+        if(allFalse) return allFalse;
+
+        var item = this.items.find(i => i.enabledDetail && i.id == index);
+        return item != null;
     }
 
-    checkDetail(): boolean {
-        return this.items.every(i => i.enabledDetail === false);
+    closeDetail(): void {
+        // this.items.forEach(i => i.enabledDetail = false);
+        this.items = [
+            {
+                'id': 0,
+                'img': "https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png",
+                'text': 'dotnet',
+                'enabledDetail': false
+            },
+            {
+                'id': 1,
+                'img': "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png",
+                'text': 'angular',
+                'enabledDetail': false
+            }
+        ]
+        console.log("CHAMEI O CLOSE")
     }
+
+    // checkDetail(): boolean {
+    //     return this.items.every(i => i.enabledDetail === false);
+    // }
 }

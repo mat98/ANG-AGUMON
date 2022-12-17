@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ElementRef, AfterViewInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { CertificateItem } from "../certificates.model";
 
 @Component({
     selector: 'app-detail-certificate',
@@ -12,10 +12,9 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
     color: string = "";
     img: string = "";
     @Input() recourse: string = "";
+    @Input() certificateInfo!: CertificateItem;
 
-    constructor(private _activateRoute: ActivatedRoute, private elementRef: ElementRef) {
-
-    }
+    constructor( private elementRef: ElementRef) {}
 
     ngOnInit(): void {
         var key = this.recourse;
@@ -58,8 +57,6 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
                 expandedClass: string = "is-expanded",
                 hasExpandedClass: string = "has-expanded-item";
 
-            console.log(sections)
-            console.log(closeButtons);
             const initEvents = () => {
                 sections.forEach((element: any) => {
                     element.addEventListener("click", () => openSection(element));
