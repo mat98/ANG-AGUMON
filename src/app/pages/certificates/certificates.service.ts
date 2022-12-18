@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class CertificateService {
-    API_URL = environment.apiBase;
+    API_URL = "environment.apiBase";
 
     constructor(private _http: HttpClient) {}
 
