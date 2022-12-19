@@ -4,7 +4,7 @@ img {
     filter: drop-shadow(0 0 0.9rem #29274c);
 
     @media (max-width:801px) {
-        width: 10vh;
+        width: 20vh;
     }
 }
 
@@ -13,7 +13,15 @@ mat-icon {
 }
 
 .recourse {
-    width: 50%;
+    @media screen and (max-width: 649px) {
+        width: 100%;
+        height: 50vh;
+    }
+
+    @media screen and (min-width: 650px) {
+        width: 50%;
+        height: 80vh;
+    }
 
     // div com texto dos certificados
     &:nth-child(2) {

@@ -12,18 +12,25 @@ export class CertificatesBodyComponent implements OnInit {
     isLoading: boolean = false;
     items = [
         {
-            'id': 0,
+            'id': 'dotnet',
             'img': "https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png",
-            'text': 'dotnet',
+            'text': 'Dotnet',
             'enabledDetail': false
         },
         {
-            'id': 1,
+            'id': 'angular',
             'img': "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png",
-            'text': 'angular',
-            'enabledDetail': true
+            'text': 'Angular',
+            'enabledDetail': false
+        },
+        {
+            'id': 'flutter',
+            'img': "https://archive.org/download/github.com-flutter-flutter_-_2022-02-08_11-18-30/cover.jpg",
+            'text': 'Flutter',
+            'enabledDetail': false
         }
     ]
+    itemsDefault: any;
     detailEnabled = true;
     @Input() certificateInfo!: CertificateItem;
 
@@ -31,6 +38,7 @@ export class CertificatesBodyComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.itemsDefault = this.items;
     }
 
     navigateCertificate(recourse: string): void {
@@ -80,31 +88,30 @@ export class CertificatesBodyComponent implements OnInit {
         this.changeDetection.detectChanges();
     }
 
-    handleSectionEnabled(index: number): boolean {
+    handleSectionEnabled(itemSelected: any): boolean {
         let allFalse: boolean = this.items.every(i => i.enabledDetail === false);
-        if(allFalse) return allFalse;
+        if (allFalse) return allFalse;
 
-        var item = this.items.find(i => i.enabledDetail && i.id == index);
+        // var item = this.items.find(i => i.enabledDetail && i.id == index);
+        var item = this.items.find(i => i.enabledDetail && i === itemSelected);
         return item != null;
     }
 
     closeDetail(): void {
-        // this.items.forEach(i => i.enabledDetail = false);
-        this.items = [
-            {
-                'id': 0,
-                'img': "https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png",
-                'text': 'dotnet',
-                'enabledDetail': false
-            },
-            {
-                'id': 1,
-                'img': "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png",
-                'text': 'angular',
-                'enabledDetail': false
-            }
-        ]
-        console.log("CHAMEI O CLOSE")
+        this.items.forEach(i => i.enabledDetail = false);
+    }
+
+    getFilterShadow(choice: string) {
+        console.log(choice)
+        switch (choice) {
+            case 'dotnet':
+                return { 'filter': 'drop-shadow(0 0 0.9rem #732a6f)' }
+            case 'angular':
+                return { 'filter': 'drop-shadow(0 0 0.9rem #b70029)' }
+            case 'flutter':
+                return { 'filter': 'drop-shadow(0 0 0.9rem #45d1fd)' }
+        }
+        return { 'filter': 'drop-shadow(0 0 0.9rem blue)' }
     }
 
     // checkDetail(): boolean {

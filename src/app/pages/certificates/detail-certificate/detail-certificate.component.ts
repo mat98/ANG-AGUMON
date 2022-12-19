@@ -11,42 +11,29 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
     isLoading: boolean = false;
     color: string = "";
     img: string = "";
-    @Input() recourse: string = "";
+    @Input() recourse: any;
     @Input() certificateInfo!: CertificateItem;
 
     constructor( private elementRef: ElementRef) {}
 
     ngOnInit(): void {
-        var key = this.recourse;
-        switch (key) {
-            case 'dotnet':
-                // this.color = "#732a6f";
-                this.img = "https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png"
-                break;
-            case 'angular':
-                // this.color = "#b70029";
-                this.img = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png"
-                break;
-            case 'flutter':
-                this.color = "#45d1fd";
-                this.img = "https://archive.org/download/github.com-flutter-flutter_-_2022-02-08_11-18-30/cover.jpg"
-                break;
-            case 'nodejs':
-                this.color = "#90c53f";
-                this.img = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png"
-                break;
-            case 'vuejs':
-                this.color = "#399d79";
-                this.img = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
-                break;
-            case 'corda':
-                this.color = "#b00027";
-                this.img = "https://s3.cointelegraph.com/storage/uploads/view/df72564418f401cce36ff1f3329126cd.png"
-                break;
+        this.img = this.recourse.img;
+        //     case 'nodejs':
+        //         this.color = "#90c53f";
+        //         this.img = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png"
+        //         break;
+        //     case 'vuejs':
+        //         this.color = "#399d79";
+        //         this.img = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
+        //         break;
+        //     case 'corda':
+        //         this.color = "#b00027";
+        //         this.img = "https://s3.cointelegraph.com/storage/uploads/view/df72564418f401cce36ff1f3329126cd.png"
+        //         break;
 
-            default:
-                break;
-        }
+        //     default:
+        //         break;
+        // }
     }
 
     ngAfterViewInit() {
@@ -85,6 +72,10 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
         })();
 
         Boxlayout.init();
+    }
+
+    redirectLinkCertificate() {
+        window.open(this.certificateInfo.linkCertified, "_blank");
     }
 
 

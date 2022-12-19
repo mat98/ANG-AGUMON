@@ -3,12 +3,14 @@
     fxLayoutGap="50">
     <img [src]="img" alt="img">
   </div>
-  <div class="recourse" fxLayout="column" fxLayoutGap="50">
-    <app-label text="2022" size="3vh"></app-label>
-    <app-label text="Alura" size="4vh" color="#F3BB41"></app-label>
-    <div fxLayout="row" fxLayoutGap="100">
-      <app-label [text]="certificateInfo.name" size="2vh"></app-label>
-      <mat-icon>download</mat-icon>
+  <div class="recourse">
+    <div fxLayoutGap="50" fxLayout="column" *ngIf="certificateInfo.technology === recourse.id">
+      <app-label text="2022" size="3vh"></app-label>
+      <app-label text="Alura" size="4vh" color="#F3BB41"></app-label>
+      <div fxLayout="row" fxLayoutGap="100">
+        <app-label [text]="certificateInfo.name" size="2vh"></app-label>
+        <mat-icon (click)="redirectLinkCertificate()">download</mat-icon>
+      </div>
     </div>
   </div>
 </main>

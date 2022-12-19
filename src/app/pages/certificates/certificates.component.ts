@@ -32,6 +32,7 @@ export class CertificatesComponent implements OnInit {
                 resp.certificados[0].year, 
                 resp.certificados[0].educationInstitution, 
                 resp.certificados[0].technology,
+                resp.certificados[0].linkCertified,
             );
 
             this.isLoading = false;
