@@ -3,6 +3,9 @@
   "cli": {
     "analytics": "7235e85d-49b5-4d3b-a979-5fe3dda69ea6"
   },
+  "glob": "_redirects",
+  "input": "src",
+  "output": "/",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
