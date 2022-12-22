@@ -20,22 +20,24 @@ export class CertificatesComponent implements OnInit {
         this.getCertificates();
     }
 
-    constructor(private _certificatesService: CertificateService) { 
+    constructor(private _certificatesService: CertificateService) {
     }
 
     private getCertificates(): void {
-        this._certificatesService.getCertificates(this.pageNumber, this.pageSize).subscribe((resp) => {
+        this._certificatesService.getCertificates(this.pageNumber, this.pageSize).subscribe(async (resp) => {
             this.lengthForPagination = 10;
 
             this.certificateInfo = new CertificateModel(
-                resp.certificados[0].name, 
-                resp.certificados[0].year, 
-                resp.certificados[0].educationInstitution, 
+                resp.certificados[0].name,
+                resp.certificados[0].year,
+                resp.certificados[0].educationInstitution,
                 resp.certificados[0].technology,
                 resp.certificados[0].linkCertified,
             );
 
-            this.isLoading = false;
+            await setTimeout(() => {
+                this.isLoading = false;
+            }, 3000);
         })
     }
 }

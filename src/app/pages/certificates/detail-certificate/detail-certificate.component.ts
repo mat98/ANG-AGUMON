@@ -77,6 +77,4 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
     redirectLinkCertificate() {
         window.open(this.certificateInfo.linkCertified, "_blank");
     }
-
-
 }

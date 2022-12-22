@@ -25,7 +25,7 @@ export class CertificatesBodyComponent implements OnInit {
         },
         {
             'id': 'flutter',
-            'img': "https://archive.org/download/github.com-flutter-flutter_-_2022-02-08_11-18-30/cover.jpg",
+            'img': "https://static-00.iconduck.com/assets.00/flutter-icon-413x512-4picx6vy.png",
             'text': 'Flutter',
             'enabledDetail': false
         }

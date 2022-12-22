@@ -1,4 +1,11 @@
 
+main {
+    margin: 0;
+    padding: 0;
+    min-height: 80vmin;
+    background-color: #13131f;
+}
+
 app-certificates-body {
     display: inline-block;
     width: 100%;
@@ -6,9 +13,9 @@ app-certificates-body {
     top: 100%;
 }
 
-main {
-    margin: 0;
-    padding: 0;
-    min-height: 80vmin;
-    background-color: #13131f;
+#spinner {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: calc(100vh - 10vh);
 }
