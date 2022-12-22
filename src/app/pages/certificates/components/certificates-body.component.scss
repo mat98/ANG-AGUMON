@@ -10,13 +10,6 @@ $section-expanded-class: "is-expanded";
 $section-has-expanded-class: "has-expanded-item";
 $section-colors: #732a6f, #b70029, #45d1fd, #10a296;
 
-.main {
-    margin: 0;
-    margin-top:5vh;
-    padding: 0;
-    min-height: 90vh;
-}
-
 .#{$section-class} {
     width: 50%;
     cursor: pointer;

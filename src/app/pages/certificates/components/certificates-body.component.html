@@ -1,4 +1,4 @@
-<main class="main" fxLayout="row wrap">
+<main fxLayout="row wrap">
     <ng-container *ngFor="let item of items; let i = index;">
         <section class="recourse" [ngClass]="{'is-expanded': item.enabledDetail}" fxLayout="column"
             *ngIf="handleSectionEnabled(item)" fxLayoutAlign="center center">
