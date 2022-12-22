@@ -8,18 +8,20 @@
         fxLayoutAlign.xs="right right" fxLayoutGap="40" fxLayoutGap.xs="25">
         <div fxLayout="column" fxLayoutGap="15" fxLayoutGap.xs="5">
             <div fxLayout="row">
-                <strong>Quem sou eu?</strong>
+                <strong>Experiência profissional</strong>
+                <mat-icon class="ml10">timeline</mat-icon>
             </div>
             <div fxLayout="row">
-                <span>Link sobre meu perfil</span>
+                <mat-label (click)="redirectLink('working-exp')" style="cursor: pointer">Clique e saiba mais sobre</mat-label>
             </div>
         </div>
         <div fxLayout="column" fxLayoutGap="15" fxLayoutGap.xs="5">
             <div fxLayout="row">
-                <strong>Veja mais na árvore de habilidades</strong>
+                <strong>Gráfico de Habilidades</strong>
+                <mat-icon class="ml10">local_fire_department</mat-icon>
             </div>
             <div fxLayout="row">
-                <span>Link para página de skills</span>
+                <mat-label (click)="redirectLink('skills')" style="cursor: pointer">Clique e saiba mais sobre</mat-label>
             </div>
         </div>
         <div fxLayout="column" fxLayoutGap="15" fxLayoutGap.xs="5">
@@ -28,7 +30,7 @@
                 <mat-icon class="ml10">mail_outline</mat-icon>
             </div>
             <div fxLayout="row">
-                <span>mateusd.santos10@gmail.com</span>
+                <mat-label (click)="redirectLink('contact-me')" style="cursor: pointer">Clique e saiba mais sobre</mat-label>
             </div>
         </div>
     </div>

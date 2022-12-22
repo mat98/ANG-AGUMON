@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-footer',
@@ -6,4 +7,9 @@ import { Component } from "@angular/core";
     styleUrls: ['./footer.component.scss']
 })
 
-export class FooterComponent {}
+export class FooterComponent {
+    constructor(private _router: Router) {}
+    redirectLink(path: string):void {
+        this._router.navigate([path]);
+    }
+}
