@@ -1,20 +1,14 @@
+
 app-certificates-body {
-    min-height: 80vh;
-    padding: 20px;
-    display:inline-block;
+    display: inline-block;
     width: 100%;
     margin: 0;
-    padding: 0;
+    top: 100%;
 }
 
-div {
-    background-color: #13131f;
-    margin-top:2.3vh;
-}
-
-.main {
+main {
     margin: 0;
-    margin-top:5vh;
     padding: 0;
-    min-height: 90vh;
+    min-height: 80vmin;
+    background-color: #13131f;
 }

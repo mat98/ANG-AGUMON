@@ -1,10 +1,10 @@
-<main class="main">
-    <mat-spinner *ngIf="isLoading"></mat-spinner>
+<main>
+    <!-- <mat-spinner *ngIf="isLoading"></mat-spinner> -->
     <!-- <ngx-skeleton-loader *ngIf="isLoadingSk" count="1" [theme]="{ 'border-radius': '10', height: '50px' }">
     </ngx-skeleton-loader> -->
     
     <div *ngIf="!isLoading">
         <app-certificates-body [certificateInfo]="certificateInfo"></app-certificates-body>
     </div> 
-    <app-footer></app-footer>
 </main>
+<app-footer></app-footer>

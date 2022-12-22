@@ -35,7 +35,7 @@ export class CertificatesComponent implements OnInit {
                 resp.certificados[0].linkCertified,
             );
 
-            // this.isLoading = false;
+            this.isLoading = false;
         })
     }
 }

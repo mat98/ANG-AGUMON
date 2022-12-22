@@ -113,8 +113,4 @@ export class CertificatesBodyComponent implements OnInit {
         }
         return { 'filter': 'drop-shadow(0 0 0.9rem blue)' }
     }
-
-    // checkDetail(): boolean {
-    //     return this.items.every(i => i.enabledDetail === false);
-    // }
 }

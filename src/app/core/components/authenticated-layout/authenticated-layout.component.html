@@ -1,10 +1,7 @@
 <div>
   <mat-toolbar color="primary">
-    <mat-icon *ngIf="username" style="margin-right: 10px; cursor: pointer">menu</mat-icon>
-
-    <span (click)="navigateTo('home'); sidenav.close()" style="cursor: pointer">
-    </span>
-
+    <mat-icon *ngIf="username" style="margin-right: 10px;">menu</mat-icon>
+    
     <button mat-icon-button class="example-icon" (click)="toggleSidenav(sidenav)"
       aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>

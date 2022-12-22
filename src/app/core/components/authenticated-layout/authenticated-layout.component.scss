@@ -1,16 +1,16 @@
 @import url(//fonts.googleapis.com/css?family=Montserrat);
 
 mat-toolbar {
-  position: fixed;
   top: 0;  
   z-index: 10;
   background:inherit;
 }
-.container {
-  padding: 0 20px 0 20px;
+
+mat-icon {
+  cursor: pointer;
 }
 
-.pointer {
+app-logo-text {
   cursor: pointer;
 }
 
