@@ -10,10 +10,12 @@ $section-expanded-class: "is-expanded";
 $section-has-expanded-class: "has-expanded-item";
 $section-colors: #732a6f, #b70029, #45d1fd, #10a296;
 
+main {
+   height: 87vh; 
+}
+
 .#{$section-class} {
     width: 50%;
-    padding-top: 0.6%;
-    padding-bottom: 5%;
     cursor: pointer;
     z-index: 0;
     overflow: hidden;
@@ -23,25 +25,18 @@ $section-colors: #732a6f, #b70029, #45d1fd, #10a296;
     transition-timing-function: $section-transition-timing-function;
     transition-duration: $section-transition-duration;
 
-    &:not(.#{$section-expanded-class}) {
-        transition-duration: $none-section-transition-duration;
-    }
-
-    @media screen and (max-width: 600px) {
-        width: 50%;
-    }
-
     app-label-subtitle {
         font-size: 1rem;
         font-family: 'Papyrus', sans-serif;
     }
 
-
+    &:not(.#{$section-expanded-class}) {
+        transition-duration: $none-section-transition-duration;
+    }
 
     &:nth-child(1) {
         top: 0;
         left: 0;
-        // background: nth($section-colors, 1);
 
         app-label-subtitle {
             color: nth($section-colors, 1);
@@ -99,6 +94,10 @@ $section-colors: #732a6f, #b70029, #45d1fd, #10a296;
 
     .#{$section-has-expanded-class} &:not(.#{$section-expanded-class}) {
         transform: scale(0);
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 50%;
     }
 }
 
