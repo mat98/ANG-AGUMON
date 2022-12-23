@@ -1,18 +1,6 @@
-.background {
+main {
     background-color: #13131f;
-    padding: 40px;
-}
-
-#div-progress-wrapper {
-    position: relative;
-    width: 10rem;
-}
-
-.current {
-    position: absolute;
-    color: #bbb;
-    font-weight: 100;
-    line-height: 1;
+    padding: 4vmin;
 }
 
 round-progress {
@@ -27,21 +15,6 @@ mat-card {
     }
 }
 
-#group-images {
-    width:  auto;
-    display: flex;
-    border-radius: none;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: rgba(83, 83, 83, 0.1);
-    padding: 2%;
-    margin-bottom: 20px;
-    overflow-x: auto;
-}
-
-#group-images::-webkit-scrollbar{
-    width:0;
-}
-
 app-button {
     width: 15%;
 
@@ -50,10 +23,46 @@ app-button {
     }
 }
 
+#div-progress-wrapper {
+    position: relative;
+    width: 10rem;
+}
+
+#div-plataform-information {
+    padding: 0;
+}
+
+#group-images {
+    width: auto;
+    display: flex;
+    border-radius: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgba(83, 83, 83, 0.1);
+    margin-bottom: 20px;
+    overflow-x: auto;
+
+    // FIX: ajuste para rolamento dos cards sem margem apenas para mobile
+    @media (max-width:900px) {
+        margin-right: -18px;
+        padding-right: 4vmin;
+    }
+}
+
+#group-images::-webkit-scrollbar {
+    width: 0;
+}
+
 #container {
     margin: 20px;
     width: 200px;
     height: 100px;
+}
+
+.current {
+    position: absolute;
+    color: #bbb;
+    font-weight: 100;
+    line-height: 1;
 }
 
 .icon {
