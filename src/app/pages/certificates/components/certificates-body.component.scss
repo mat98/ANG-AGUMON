@@ -10,12 +10,9 @@ $section-expanded-class: "is-expanded";
 $section-has-expanded-class: "has-expanded-item";
 $section-colors: #732a6f, #b70029, #45d1fd, #10a296;
 
-main {
-    height: 80vmin;
-}
-
 .#{$section-class} {
     width: 50%;
+    padding-top: 0.6%;
     padding-bottom: 5%;
     cursor: pointer;
     z-index: 0;
@@ -128,7 +125,7 @@ img {
 
 .teste {
     width: 100%;
-    // height: 90vh;
+    height: auto;
     left: 0;
     right: 0;
     top: 0;
