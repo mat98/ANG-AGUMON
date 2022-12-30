@@ -1,4 +1,6 @@
 import { Component, Input } from "@angular/core";
+import Swal from "sweetalert2";
+import { ISendMessage } from "../../models/send_message.model";
 
 @Component({
     selector: 'send-message-contact-container',
@@ -6,11 +8,20 @@ import { Component, Input } from "@angular/core";
     styleUrls: ['./send_message_contact_container.component.scss']
 })
 export class SendMessageContactContainerComponent {
-    _label: string = ""
-
-    @Input() label: string | undefined;
+    @Input() data: ISendMessage[] = []
+    @Input() msgButton: string = "";
 
     ngOnInit(): void {
-        if (this.label) this._label = this.label;
+        
+    }
+
+    sendMessage(): void {
+        Swal.fire(
+            {
+                icon: "success",
+                text: "E-mail enviado com sucesso",
+                confirmButtonColor: '#3085d6',
+            }
+        );
     }
 }

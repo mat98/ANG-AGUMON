@@ -16,17 +16,17 @@ export class SkillsComponent implements OnInit {
         },
         {
             "max": 100,
-            "current": 70,
+            "current": 75,
             "text": "CSS",
         },
         {
             "max": 100,
-            "current": 70,
+            "current": 75,
             "text": "Javascript",
         },
         {
             "max": 100,
-            "current": 60,
+            "current": 75,
             "text": "Angular"
         },
         {
@@ -41,12 +41,12 @@ export class SkillsComponent implements OnInit {
         },
         {
             "max": 100,
-            "current": 60,
+            "current": 50,
             "text": "Nodejs",
         },
         {
             "max": 100,
-            "current": 40,
+            "current": 50,
             "text": "Vuejs"
         },
     ];

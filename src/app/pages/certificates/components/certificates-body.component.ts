@@ -32,7 +32,7 @@ export class CertificatesBodyComponent implements OnInit {
     ]
     itemsDefault: any;
     detailEnabled = true;
-    @Input() certificateInfo!: CertificateItem;
+    @Input() certificateInfo!: CertificateItem[];
 
     constructor(private _router: Router, private elementRef: ElementRef, private changeDetection: ChangeDetectorRef) {
     }
@@ -102,7 +102,6 @@ export class CertificatesBodyComponent implements OnInit {
     }
 
     getFilterShadow(choice: string) {
-        console.log(choice)
         switch (choice) {
             case 'dotnet':
                 return { 'filter': 'drop-shadow(0 0 0.9rem #732a6f)' }
@@ -112,5 +111,9 @@ export class CertificatesBodyComponent implements OnInit {
                 return { 'filter': 'drop-shadow(0 0 0.9rem #45d1fd)' }
         }
         return { 'filter': 'drop-shadow(0 0 0.9rem blue)' }
+    }
+
+    getCertificatesByRecourse(recourse: string): CertificateItem[]{
+        return this.certificateInfo.filter(certified => certified.technology === recourse);
     }
 }

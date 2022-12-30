@@ -13,7 +13,7 @@ export class CertificatesComponent implements OnInit {
     pageNumber = 1;
     pageSize = 10;
     lengthForPagination = 0;
-    certificateInfo!: CertificateItem;
+    certificateInfo: CertificateItem[] = [];
 
     ngOnInit(): void {
         this.isLoading = true;
@@ -27,17 +27,13 @@ export class CertificatesComponent implements OnInit {
         this._certificatesService.getCertificates(this.pageNumber, this.pageSize).subscribe(async (resp) => {
             this.lengthForPagination = 10;
 
-            this.certificateInfo = new CertificateModel(
-                resp.certificados[0].name,
-                resp.certificados[0].year,
-                resp.certificados[0].educationInstitution,
-                resp.certificados[0].technology,
-                resp.certificados[0].linkCertified,
-            );
-
+            resp.certificados.forEach((certified: any)=> {
+                this.certificateInfo.push(certified)
+            });
+            
             await setTimeout(() => {
                 this.isLoading = false;
-            }, 3000);
+            }, 1000);
         })
     }
 }

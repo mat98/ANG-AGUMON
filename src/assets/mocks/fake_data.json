@@ -1,5 +1,5 @@
 {
-    "totalCertificates": 3,
+    "totalCertificates": 2,
     "certificados": [
         {
             "name": "Angular 9 - Essencial",
@@ -7,6 +7,34 @@
             "technology": "angular",
             "educationInstitution": "alura",
             "linkCertified": "https://www.cod3r.com.br/certificates/io3f9fndsp"
+        },
+        {
+            "name": "Bootstrap 4",
+            "year": 2019,
+            "technology": "angular",
+            "educationInstitution": "udemy",
+            "linkCertified": "https://www.udemy.com/certificate/UC-Q9164F1W/"
+        },
+        {
+            "name": "Flutter: Criando primeiro app",
+            "year": 2020,
+            "technology": "flutter",
+            "educationInstitution": "alura",
+            "linkCertified": "https://cursos.alura.com.br/certificate/mateusd-santos10/flutter-crie-primeiro-app"
+        },
+        {
+            "name": "Persistência com Flutter",
+            "year": 2020,
+            "technology": "flutter",
+            "educationInstitution": "alura",
+            "linkCertified": "https://cursos.alura.com.br/certificate/mateusd-santos10/flutter-persistencia-interna"
+        },
+        {
+            "name": "C#: Entenda orientação a objetos",
+            "year": 2019,
+            "technology": "dotnet",
+            "educationInstitution": "alura",
+            "linkCertified": "https://cursos.alura.com.br/certificate/mateusd-santos10/csharp-parte-2-introducao-orientacao-objetos"
         }
     ]
 }

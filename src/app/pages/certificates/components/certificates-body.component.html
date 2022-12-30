@@ -11,7 +11,7 @@
             </div>
 
             <div *ngIf="item.enabledDetail" class="teste">
-                <app-detail-certificate [recourse]="item" [certificateInfo]="certificateInfo"></app-detail-certificate>
+                <app-detail-certificate [recourse]="item" [certificateInfo]="getCertificatesByRecourse(item.id)"></app-detail-certificate>
             </div>
         </section>
     </ng-container>

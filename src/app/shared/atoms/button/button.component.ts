@@ -16,7 +16,6 @@ export class ButtonComponent {
     }
 
     handler() {
-        console.log("opa")
         this.handlerBtn.emit('Some value to send to the parent');
     }
 }

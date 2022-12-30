@@ -4,13 +4,22 @@
     <img [src]="img" alt="img">
   </div>
   <div class="recourse">
-    <div fxLayoutGap="50" fxLayout="column" *ngIf="certificateInfo.technology === recourse.id">
-      <app-label text="2022" size="3vh"></app-label>
-      <app-label text="Alura" size="4vh" color="#F3BB41"></app-label>
-      <div fxLayout="row" fxLayoutGap="100">
-        <app-label [text]="certificateInfo.name" size="2vh"></app-label>
-        <mat-icon (click)="redirectLinkCertificate()">download</mat-icon>
-      </div>
+    <div fxLayoutGap="40" fxLayout="column">
+      <section *ngFor="let year of years">
+        <div fxLayout="row" class="mb20">
+          <app-label [text]="year" size="3vh" color="#F3BB41"></app-label>
+        </div>
+        <div *ngFor="let item of certificateInfo">
+          <div *ngIf="item.technology === recourse.id && item.year.toString() === year">
+            <div fxLayout="row" fxLayoutGap="10" class="mb10">
+              <app-label [text]="item.educationInstitution + ':' | capitalizeFirstLetter " color="#F3BB41"
+                size="2vh"></app-label>
+              <app-label [text]="item.name" size="2vh"></app-label>
+              <mat-icon (click)="redirectLinkCertificate(item)">download</mat-icon>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </main>

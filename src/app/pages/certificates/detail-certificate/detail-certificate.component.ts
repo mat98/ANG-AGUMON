@@ -11,13 +11,18 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
     isLoading: boolean = false;
     color: string = "";
     img: string = "";
+    years: string[] = [];
     @Input() recourse: any;
-    @Input() certificateInfo!: CertificateItem;
+    @Input() certificateInfo!: CertificateItem[];
 
     constructor( private elementRef: ElementRef) {}
 
     ngOnInit(): void {
         this.img = this.recourse.img;
+
+        console.log(this.certificateInfo)
+
+        this.years = [...new Set(this.certificateInfo.map(certified => certified.year.toString()))];
         //     case 'nodejs':
         //         this.color = "#90c53f";
         //         this.img = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png"
@@ -74,7 +79,7 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
         Boxlayout.init();
     }
 
-    redirectLinkCertificate() {
-        window.open(this.certificateInfo.linkCertified, "_blank");
+    redirectLinkCertificate(item: CertificateItem) {
+        window.open(item.linkCertified, "_blank");
     }
 }
