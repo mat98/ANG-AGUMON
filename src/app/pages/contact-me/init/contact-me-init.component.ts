@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
-import { Location } from '@angular/common';
 import { ISendMessage } from 'src/app/shared/models/send_message.model';
+import { ContactMeService } from '../contact-me.service';
 
 @Component({
   selector: 'app-contactme-init',
@@ -26,7 +26,7 @@ export class ContactMeInitComponent implements OnInit {
   numberConnection = '2';
   textConnection = 'Conexões realizadas a partir do meio de contato';
 
-  constructor(private _fb: UntypedFormBuilder, private _location: Location) {
+  constructor(private _fb: UntypedFormBuilder, private _contactService: ContactMeService) {
     this.form = this._fb.group({
       captureDate: [null],
     });

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBase: 'http://localhost:7000'
+  apiBase: 'https://dotnet-agumon.onrender.com'
 };
 
 /*

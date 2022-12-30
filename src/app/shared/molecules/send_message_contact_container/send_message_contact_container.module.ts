@@ -12,7 +12,7 @@ import { SendMessageContactContainerComponent } from './send_message_contact_con
     imports: [
         ButtonModule,
         InputTextModule,
-        CoreModule
+        CoreModule,
     ]
 })
 export class SendMessageContactContainerModule { }

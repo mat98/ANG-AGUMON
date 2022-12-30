@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
+import { ContactMeService } from "src/app/pages/contact-me/contact-me.service";
 import Swal from "sweetalert2";
 import { ISendMessage } from "../../models/send_message.model";
 
@@ -13,7 +14,7 @@ export class SendMessageContactContainerComponent {
     @Input() data: ISendMessage[] = []
     @Input() msgButton: string = "";
 
-    constructor() {
+    constructor(private _contactService: ContactMeService) {
         this.generateForm()
     }
 
@@ -28,6 +29,14 @@ export class SendMessageContactContainerComponent {
 
     sendMessage(): void {
         if (this.formSendEmail.valid) {
+            this.sendEmail();
+        } else {
+            this.formSendEmail.markAllAsTouched();
+        }
+    }
+
+    private sendEmail(): void {
+        this._contactService.sendEmail(this.formSendEmail.value).subscribe(async (resp) => {
             Swal.fire(
                 {
                     icon: "success",
@@ -35,13 +44,6 @@ export class SendMessageContactContainerComponent {
                     confirmButtonColor: '#3085d6',
                 }
             );
-        } else {
-            this.formSendEmail.markAllAsTouched();
-        }
-    }
-
-    clearFilters(): void {
-        // formDirective.resetForm();
-        // this.form.reset();
+        })
     }
 }
