@@ -1,9 +1,17 @@
 textarea,
 input {
     border: none;
-    border-bottom: 3px solid #13131f;
+
     background-color: rgba(0, 0, 0, 0.04);
-    padding-left: 10px!important;
-    padding-top: 10px!important;
+    padding-left: 10px !important;
+    padding-top: 10px !important;
     width: 100%;
+}
+
+textarea.ng-touched {
+    border-bottom: 3px solid #f44336;
+}
+
+.mat-form-field-invalid .mat-form-field-required-marker {
+    color: red;
 }

@@ -20,9 +20,8 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
     ngOnInit(): void {
         this.img = this.recourse.img;
 
-        console.log(this.certificateInfo)
-
         this.years = [...new Set(this.certificateInfo.map(certified => certified.year.toString()))];
+        this.years = this.years.sort((a: string, b: string) => a.localeCompare(b));
         //     case 'nodejs':
         //         this.color = "#90c53f";
         //         this.img = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png"

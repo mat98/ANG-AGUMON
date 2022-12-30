@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactMeInitComponent } from './init/contact-me-init.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from 'src/app/shared/components/shared.module';
-import { InformationContactOrgModule } from 'src/app/shared/organisms/info_contact_org/info_contact_org.module';
+import { SendMessageContactContainerModule } from 'src/app/shared/molecules/send_message_contact_container/send_message_contact_container.module';
 
 const routes: Routes = [
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
     RouterModule,
     SharedModule,
     LabelModule,
-    InformationContactOrgModule
+    SendMessageContactContainerModule
   ],
   declarations: [ContactMeInitComponent],
 })

@@ -5,10 +5,7 @@
         <div fxLayout="column" [formGroup]="form">
           <app-label [text]="contactMe" color="white" class="mb50 mt40" size="1.5em"></app-label>
 
-          <info-contact-org class="mb20" name="{{formDescription.name}}" email="{{formDescription.emailAddress}}"
-            subject="{{formDescription.subjectContact}}" message="{{formDescription.messageContact}}"
-            sendMessage="Enviar Mensagem">
-          </info-contact-org>
+          <send-message-contact-container msgButton="Enviar Mensagem" [data]="itensSendEmail"></send-message-contact-container>
         </div>
       </form>
     </div>

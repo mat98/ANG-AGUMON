@@ -1,27 +1,28 @@
 <main>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15" fxLayoutAlign="right">
-        <div fxFlex="60">
-            <input-text-component [label]="data[0].label" [placeholder]="data[0].placeholder"></input-text-component>
+    <form *ngIf="formSendEmail" [formGroup]="formSendEmail">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15" fxLayoutAlign="right">
+            <div fxFlex="60">
+                <input-text-component [label]="data[0].label" controlName="name" [placeholder]="data[0].placeholder"></input-text-component>
+            </div>
+            <div fxFlex="50">
+                <input-text-component [label]="data[1].label" controlName="email" [placeholder]="data[1].placeholder"></input-text-component>
+            </div>
         </div>
-        <div fxFlex="50">
-            <input-text-component [label]="data[1].label" [placeholder]="data[1].placeholder"></input-text-component>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15" fxLayoutAlign="right">
+            <div fxFlex="100">
+                <input-text-component [label]="data[2].label" controlName="subject" [placeholder]="data[2].placeholder"></input-text-component>
+            </div>
         </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15" fxLayoutAlign="right">
-        <div fxFlex="100">
-            <input-text-component [label]="data[2].label" [placeholder]="data[2].placeholder"></input-text-component>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15" fxLayoutAlign="right">
+            <div fxFlex="100">
+                <p class="formfield">
+                    <label for="textarea" class="ml10" style="color: white">{{data[3].label}} *</label>
+                    <textarea class="mt10" formControlName="message" class="form-control" matInput style="height: 15VH; color: white; resize: none;"></textarea>
+                </p>
+            </div>
         </div>
-      
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15" fxLayoutAlign="right">
-        <div fxFlex="100">
-            <p class="formfield">
-                <label for="textarea" class="ml10" style="color: white">{{data[3].label}}</label>
-                <textarea class="mt10" matInput style="height: 15VH; color: white; resize: none;"></textarea>
-            </p>
+        <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="10">
+            <app-button [label]="msgButton" (click)="sendMessage()"></app-button>
         </div>
-    </div>
-    <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="10">
-        <app-button [label]="msgButton" (click)="sendMessage()"></app-button>
-    </div>
+    </form>
 </main>

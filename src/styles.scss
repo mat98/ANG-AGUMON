@@ -148,7 +148,7 @@ body {
 body {
   // background-image:url("assets/images/background.webp");
   margin: 0;
-  
+
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -225,5 +225,9 @@ mat-card {
 }
 
 .material-icons.color_white {
+  color: #FFFFFF;
+}
+
+.mat-form-field-required-marker {
   color: #FFFFFF;
 }

@@ -11,6 +11,6 @@ import { InputTextComponent } from './input_text.component';
     imports: [
         CoreModule,
         LabelModule
-    ]
+    ],
 })
 export class InputTextModule {}

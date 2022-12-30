@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 import Swal from "sweetalert2";
 import { ISendMessage } from "../../models/send_message.model";
 
@@ -8,20 +9,39 @@ import { ISendMessage } from "../../models/send_message.model";
     styleUrls: ['./send_message_contact_container.component.scss']
 })
 export class SendMessageContactContainerComponent {
+    formSendEmail!: FormGroup;
     @Input() data: ISendMessage[] = []
     @Input() msgButton: string = "";
 
-    ngOnInit(): void {
-        
+    constructor() {
+        this.generateForm()
+    }
+
+    generateForm(): void {
+        this.formSendEmail = new FormGroup({
+            name: new FormControl('', [Validators.required]),
+            email: new FormControl('', [Validators.required]),
+            subject: new FormControl('', [Validators.required]),
+            message: new FormControl('', [Validators.required]),
+        })
     }
 
     sendMessage(): void {
-        Swal.fire(
-            {
-                icon: "success",
-                text: "E-mail enviado com sucesso",
-                confirmButtonColor: '#3085d6',
-            }
-        );
+        if(this.formSendEmail.valid) {
+            Swal.fire(
+                {
+                    icon: "success",
+                    text: "E-mail enviado com sucesso",
+                    confirmButtonColor: '#3085d6',
+                }
+            );
+        } else {
+            this.formSendEmail.markAllAsTouched();
+        }
+    }
+
+    clearFilters(): void {
+        // formDirective.resetForm();
+        // this.form.reset();
     }
 }

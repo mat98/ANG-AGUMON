@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
+import { ISendMessage } from 'src/app/shared/models/send_message.model';
 
 @Component({
   selector: 'app-contactme-init',
@@ -16,6 +17,7 @@ export class ContactMeInitComponent implements OnInit {
     subjectContact: 'Assunto',
     messageContact: 'Mensagem',
   };
+  itensSendEmail: ISendMessage[] = [];
 
   labelMap = 'Criando linhas de código em São Paulo!';
   contactMe = 'Hey, Mande uma mensagem!';
@@ -32,6 +34,25 @@ export class ContactMeInitComponent implements OnInit {
 
   ngOnInit(): void {
     this.generateForm()
+
+    this.itensSendEmail.push(
+      {
+        label: this.formDescription.name,
+        placeholder: ""
+      },
+      {
+        label: this.formDescription.emailAddress,
+        placeholder: ""
+      },
+      {
+        label: this.formDescription.subjectContact,
+        placeholder: ""
+      },
+      {
+        label: this.formDescription.messageContact,
+        placeholder: ""
+      }
+    )
   }
 
   private generateForm() {
