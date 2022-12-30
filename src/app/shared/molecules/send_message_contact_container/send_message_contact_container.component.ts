@@ -20,14 +20,14 @@ export class SendMessageContactContainerComponent {
     generateForm(): void {
         this.formSendEmail = new FormGroup({
             name: new FormControl('', [Validators.required]),
-            email: new FormControl('', [Validators.required]),
+            email: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/)]),
             subject: new FormControl('', [Validators.required]),
             message: new FormControl('', [Validators.required]),
         })
     }
 
     sendMessage(): void {
-        if(this.formSendEmail.valid) {
+        if (this.formSendEmail.valid) {
             Swal.fire(
                 {
                     icon: "success",
