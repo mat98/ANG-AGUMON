@@ -36,14 +36,24 @@ export class SendMessageContactContainerComponent {
     }
 
     private sendEmail(): void {
-        this._contactService.sendEmail(this.formSendEmail.value).subscribe(async (resp) => {
+        try {
+            this._contactService.sendEmail(this.formSendEmail.value).subscribe(async (_) => {
+                Swal.fire(
+                    {
+                        icon: "success",
+                        text: "E-mail enviado com sucesso",
+                        confirmButtonColor: '#3085d6',
+                    }
+                );
+            })
+        } catch(error) {
             Swal.fire(
                 {
-                    icon: "success",
-                    text: "E-mail enviado com sucesso",
-                    confirmButtonColor: '#3085d6',
+                    icon: "error",
+                    text: "Erro ao enviar email",
+                    confirmButtonColor: '#d92121',
                 }
             );
-        })
+        }
     }
 }
