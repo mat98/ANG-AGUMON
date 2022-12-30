@@ -14,7 +14,7 @@ export class ContactMeService {
     sendEmail(dataSendBody: any): Observable<any> {
         const body = {
             name: dataSendBody.name,
-            emailAddress: dataSendBody.email,
+            destination: dataSendBody.email,
             message: dataSendBody.message,
             subject: dataSendBody.subject,
         }
