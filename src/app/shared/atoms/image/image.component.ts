@@ -8,4 +8,8 @@ import { Component, Input } from "@angular/core";
 export class ImageComponent {
     @Input() src = '';
     @Input() iconType: boolean = false;
+
+    onLoadingImg(): void {
+        
+    }
 }

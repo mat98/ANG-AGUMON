@@ -5,6 +5,7 @@ import { CoreModule } from './../../core/core.module';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HomeInitComponent } from "./init/home-init.component";
+import { ImageLoaderDirective } from '../../core/directives/image-loader/image-loader.directive.ts';
 
 const routes: Routes = [
     {
@@ -12,6 +13,13 @@ const routes: Routes = [
         component: HomeInitComponent
     }
 ];
+
+const COMPONENTS: any = [
+    HomeInitComponent
+]
+const DIRECTIVES: any = [
+    ImageLoaderDirective
+]
 
 @NgModule({
     imports: [
@@ -22,7 +30,7 @@ const routes: Routes = [
         DividerModule,
         ImageTitleAndSubscriptionComponentModule
     ],
-    declarations: [HomeInitComponent]
+    declarations: [COMPONENTS, DIRECTIVES]
 })
 
 export class HomeModule { }

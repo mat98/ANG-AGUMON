@@ -7,6 +7,8 @@ import { ProjectsHome } from '../projects.model';
   styleUrls: ['./home-init.component.scss'],
 })
 export class HomeInitComponent implements OnInit {
+  isLoading: boolean = false;
+  imageProfile: string = "https://thumbs2.imgbox.com/6e/17/DQL6lIr6_t.jpg";
   projects = [
     {
       nameProject: 'Chapmon Stocks',
@@ -23,13 +25,19 @@ export class HomeInitComponent implements OnInit {
   constructor() {
     this.projectsCopy = JSON.parse(JSON.stringify(this.projects))
   }
-  
-  ngOnInit(): void { }
+
+  ngOnInit(): void {
+    this.isLoading = true;
+  }
 
   find() {
     // retorna o primeiro indice que pode ser encontrado no array, caso nao tenha item na lista, retorna -1
     this.projectsCopy = this.projects.filter(item => {
       return item.nameProject.toLowerCase().indexOf(this.searchText.toLowerCase()) > -1
     });
+  }
+
+  onLoadingImg(): void {
+    this.isLoading = false;
   }
 }

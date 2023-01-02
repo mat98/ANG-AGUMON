@@ -5,7 +5,7 @@
             <div class="close-section" (click)="closeDetail()">&times;</div>
             <div *ngIf="item.enabledDetail === false">
                 <div (click)="handleEnabledDetail(item)" fxLayout="column" fxLayoutAlign="center center">
-                    <img [src]="item.img" [ngStyle]="getFilterShadow(item.id)" alt="img">
+                    <img [src]="item.img" appImageLoader (loadingChange)="onLoadingImg()" [ngStyle]="getFilterShadow(item.id)" alt="img" preload>
                     <app-label-subtitle [text]="item.text"></app-label-subtitle>
                 </div>
             </div>

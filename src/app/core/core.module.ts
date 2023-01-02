@@ -8,7 +8,6 @@ import { MatCarouselModule } from 'ng-mat-carousel'
 import { LogoTextModule } from "../shared/atoms/logo-text/logo-text.module"
 import { MapComponent } from "./components/map/map.component"
 import { FooterComponent } from "./components/footer/footer.component"
-import { HorizontalTimelineComponent } from "./components/horizontal-timeline/horizontal-timeline.component"
 import { CapitalizeFirstLetterPipe } from "./pipes/capitalize-first-letter-pipe"
 
 const MODULES = [

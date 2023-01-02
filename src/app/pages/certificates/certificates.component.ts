@@ -27,13 +27,15 @@ export class CertificatesComponent implements OnInit {
         this._certificatesService.getCertificates(this.pageNumber, this.pageSize).subscribe(async (resp) => {
             this.lengthForPagination = 10;
 
-            resp.certificados.forEach((certified: any)=> {
+            resp.certificados.forEach((certified: any) => {
                 this.certificateInfo.push(certified)
             });
-            
-            await setTimeout(() => {
-                this.isLoading = false;
-            }, 1000);
         })
+    }
+
+    async loadingChangeImg(): Promise<void> {
+        await setTimeout(() => {
+            this.isLoading = false;
+        }, 1000);
     }
 }

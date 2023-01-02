@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
     selector: 'header-item-project-org-component',
@@ -9,8 +9,13 @@ export class HeaderItemProjectOrgComponent {
     _text: string = ""
 
     @Input() text: string | undefined;
+    @Output() loadingChange = new EventEmitter<boolean>();
 
     ngOnInit(): void {
         if (this.text) this._text = this.text;
+    }
+
+    onLoadingImg(): void {
+        this.loadingChange.emit(false);
     }
 }

@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, Input, OnInit } from "@angular/core";
+import { ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { Router } from "@angular/router";
 import { CertificateItem } from "../certificates.model";
 
@@ -33,6 +33,7 @@ export class CertificatesBodyComponent implements OnInit {
     itemsDefault: any;
     detailEnabled = true;
     @Input() certificateInfo!: CertificateItem[];
+    @Output() loadingChangeImg = new EventEmitter<boolean>();
 
     constructor(private _router: Router, private elementRef: ElementRef, private changeDetection: ChangeDetectorRef) {
     }
@@ -115,5 +116,9 @@ export class CertificatesBodyComponent implements OnInit {
 
     getCertificatesByRecourse(recourse: string): CertificateItem[]{
         return this.certificateInfo.filter(certified => certified.technology === recourse);
+    }
+
+    onLoadingImg(): void {
+        this.loadingChangeImg.emit(false);
     }
 }

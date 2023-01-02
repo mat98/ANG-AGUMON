@@ -7,9 +7,11 @@ import { Component, OnInit } from "@angular/core";
 })
 
 export class DetailProjectInitComponent implements OnInit {
-    isLoading: boolean = false;
+    isLoading: boolean = true;
 
-    ngOnInit(): void {
-      
+    ngOnInit(): void {}
+
+    loadingChangeImg() {
+        this.isLoading = false;
     }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from "@angular/core";
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from "@angular/core";
 
 @Component({
     selector: "app-detail-project-header",
@@ -8,7 +8,13 @@ import { Component, Input, OnDestroy, OnInit } from "@angular/core";
 
 export class DetailProjectHeaderComponent implements OnInit, OnDestroy {
     @Input() title = ''
+    @Output() loadingChange = new EventEmitter<boolean>();
+    
     ngOnInit(): void { }
 
     ngOnDestroy(): void { }
+
+    loadingChangeImg(): void {
+        this.loadingChange.emit(false);
+    }
 }

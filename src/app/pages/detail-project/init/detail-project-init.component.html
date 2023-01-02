@@ -1,5 +1,11 @@
 <div>
-    <app-detail-project-header title="Chapmon Stocks"></app-detail-project-header>
-    <app-detail-project-body></app-detail-project-body>
-    <app-footer></app-footer>
+    <div id="spinner" *ngIf="isLoading">
+        <mat-spinner color="warn"></mat-spinner>
+    </div>
+    <div [hidden]="isLoading">
+        <app-detail-project-header title="Chapmon Stocks"
+            (loadingChange)="loadingChangeImg()"></app-detail-project-header>
+        <app-detail-project-body></app-detail-project-body>
+        <app-footer></app-footer>
+    </div>
 </div>
