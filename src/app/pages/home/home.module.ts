@@ -5,7 +5,7 @@ import { CoreModule } from './../../core/core.module';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HomeInitComponent } from "./init/home-init.component";
-import { ImageLoaderDirective } from '../../core/directives/image-loader/image-loader.directive.ts';
+import { SharedDirectiveModule } from '../../shared/directives/shared-directive.module';
 
 const routes: Routes = [
     {
@@ -17,9 +17,6 @@ const routes: Routes = [
 const COMPONENTS: any = [
     HomeInitComponent
 ]
-const DIRECTIVES: any = [
-    ImageLoaderDirective
-]
 
 @NgModule({
     imports: [
@@ -28,9 +25,10 @@ const DIRECTIVES: any = [
         RouterModule,
         LabelModule,
         DividerModule,
-        ImageTitleAndSubscriptionComponentModule
+        ImageTitleAndSubscriptionComponentModule,
+        SharedDirectiveModule
     ],
-    declarations: [COMPONENTS, DIRECTIVES]
+    declarations: [COMPONENTS]
 })
 
 export class HomeModule { }

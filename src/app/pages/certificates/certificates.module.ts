@@ -10,7 +10,8 @@ import { DividerModule } from 'src/app/shared/atoms/divider/divider.module';
 import { LabelSubtitleModule } from 'src/app/shared/atoms/label-subtitle/label-subtitle.module';
 import { CertificatesBodyComponent } from './components/certificates-body.component';
 import { DetailCertificateComponent } from './detail-certificate/detail-certificate.component';
-import { ImageLoaderDirective } from '../../core/directives/image-loader/image-loader.directive.ts';
+import { ImageLoaderDirective } from '../../shared/directives/image-loader/image-loader.directive';
+import { SharedDirectiveModule } from '../../shared/directives/shared-directive.module';
 
 const routes: Routes = [
     {
@@ -28,11 +29,9 @@ const COMPONENTS: any = [
     DetailCertificateComponent,
     CertificatesBodyComponent
 ]
-const DIRECTIVES: any = [
-    ImageLoaderDirective
-]
 
 @NgModule({
+    declarations: [COMPONENTS],
     imports: [
         CoreModule,
         RouterModule.forChild(routes),
@@ -41,8 +40,8 @@ const DIRECTIVES: any = [
         LabelModule,
         LabelSubtitleModule,
         DividerModule,
+        SharedDirectiveModule
     ],
-    declarations: [COMPONENTS, DIRECTIVES],
     providers: [CertificateService]
 })
 
