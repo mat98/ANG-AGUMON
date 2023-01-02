@@ -16,7 +16,7 @@ export class SendMessageContactContainerComponent {
     @Input() msgButton: string = "";
 
     constructor(private _contactService: ContactMeService) {
-        this.generateForm()
+        this.generateForm();
     }
 
     generateForm(): void {
@@ -38,6 +38,7 @@ export class SendMessageContactContainerComponent {
 
     private sendEmail(): void {
         this.loadingSendEmail = true;
+        this.disabledFields();
         this._contactService.sendEmail(this.formSendEmail.value).subscribe({
             next: (_: any) => {
                 Swal.fire(
@@ -66,7 +67,22 @@ export class SendMessageContactContainerComponent {
         .add(() => this.hideLoaders());;
     }
 
+    private disabledFields(): void {
+        this.formSendEmail.controls['name'].disable();
+        this.formSendEmail.controls['email'].disable();
+        this.formSendEmail.controls['subject'].disable();
+        this.formSendEmail.controls['message'].disable();
+    }
+
+    private enabledFields(): void {
+        this.formSendEmail.controls['name'].enable();
+        this.formSendEmail.controls['email'].enable();
+        this.formSendEmail.controls['subject'].enable();
+        this.formSendEmail.controls['message'].enable();
+    }
+
     hideLoaders(): void {
         this.loadingSendEmail = false;
+        this.enabledFields();
     }
 }

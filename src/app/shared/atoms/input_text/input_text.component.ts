@@ -33,6 +33,7 @@ export class InputTextComponent implements ControlValueAccessor {
   setDisabledState?(isDisabled: boolean): void {
     throw new Error('Method not implemented.');
   }
+
   @Input() label: string | undefined;
   @Input() value: string | undefined;
   @Input() placeholder: string = "";

@@ -19,7 +19,7 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15" fxLayoutAlign="right">
             <div fxFlex="100">
                 <p class="formfield">
-                    <label for="textarea" class="ml10" style="color: white">{{data[3].label}} <span id="valid-textarea"
+                    <label for="textarea" style="color: white">{{data[3].label}} <span id="valid-textarea"
                             [ngClass]="{'invalid': formSendEmail.invalid && formSendEmail.touched}">*</span></label>
                     <textarea class="mt10" formControlName="message"
                         [ngClass]="{'textaarea': formSendEmail.invalid && formSendEmail.touched}" matInput
