@@ -8,7 +8,7 @@ import { ProjectsHome } from '../projects.model';
 })
 export class HomeInitComponent implements OnInit {
   isLoading: boolean = false;
-  imageProfile: string = "https://thumbs2.imgbox.com/6e/17/DQL6lIr6_t.jpg";
+  imageProfile: string = "https://thumbs2.imgbox.com/56/74/BB4gl52E_t.jpeg";
   projects = [
     {
       nameProject: 'Chapmon Stocks',

@@ -11,6 +11,7 @@ import { ISendMessage } from "../../models/send_message.model";
 })
 export class SendMessageContactContainerComponent {
     formSendEmail!: FormGroup;
+    loadingSendEmail: boolean = false;
     @Input() data: ISendMessage[] = []
     @Input() msgButton: string = "";
 
@@ -36,6 +37,7 @@ export class SendMessageContactContainerComponent {
     }
 
     private sendEmail(): void {
+        this.loadingSendEmail = true;
         this._contactService.sendEmail(this.formSendEmail.value).subscribe({
             next: (_: any) => {
                 Swal.fire(
@@ -45,7 +47,7 @@ export class SendMessageContactContainerComponent {
                         confirmButtonColor: '#3085d6',
                     }
                 );
-                
+
                 this.formSendEmail.markAsUntouched();
                 this.formSendEmail.reset();
                 this.formSendEmail.clearValidators();
@@ -60,6 +62,11 @@ export class SendMessageContactContainerComponent {
                     }
                 );
             }
-        });
+        })
+        .add(() => this.hideLoaders());;
+    }
+
+    hideLoaders(): void {
+        this.loadingSendEmail = false;
     }
 }

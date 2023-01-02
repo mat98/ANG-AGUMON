@@ -28,7 +28,7 @@
             </div>
         </div>
         <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="10">
-            <app-button [label]="msgButton" (click)="sendMessage()"></app-button>
+            <app-button [loading]="loadingSendEmail" [label]="msgButton" (click)="sendMessage()" [disabled]="formSendEmail.invalid"></app-button>
         </div>
     </form>
 </main>

@@ -6,14 +6,12 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
     styleUrls: ["./button.component.scss"]
 })
 export class ButtonComponent {
-    _label: string = "";
-
-    @Input() label: string | undefined;
+    @Input() label: string = "";
+    @Input() disabled: boolean = false;
+    @Input() loading: boolean = false;
     @Output() handlerBtn: EventEmitter<any> = new EventEmitter()
 
-    ngOnInit() {
-        if (this.label) this._label = this.label;
-    }
+    ngOnInit() {}
 
     handler() {
         this.handlerBtn.emit('Some value to send to the parent');

@@ -1,3 +1,5 @@
-<button (click)="handler()" mat-button type="button" class="btn" mat-raised-button>
-   {{ _label }}
-</button>
+<section>
+   <button (click)="handler()" mat-button type="button" class="btn" [disabled]="disabled" mat-raised-button>
+      {{loading ? 'Aguarde...' : label }}
+   </button>
+</section>
