@@ -4,7 +4,7 @@
             <div fxLayout="column wrap" fxLayoutAlign="center center" fxLayout.sm="column wrap" fxLayout.xs="column wrap">
                 <h2 class="mt20 mb60">Habilidades</h2>
                 <div id="div-group-projects" fxLayoutAlign="center center" fxLayout="row wrap" fxLayoutGap="30">
-                    <div id="progress-with-text" fxFlex="14" fxFlex.xs="30" class="mb20" *ngFor="let item of teste">
+                    <div id="progress-with-text" fxFlex="14" fxFlex.xs="30" class="mb20" *ngFor="let item of skills">
                         <round-progress color="#1fb8ab" [current]="item.current" [stroke]="50" [max]="item.max"
                             [responsive]="true" [duration]="800"></round-progress>
                         <div fxLayoutAlign="center center" class="mt20">

@@ -8,7 +8,7 @@ import { Component, OnInit } from "@angular/core";
 
 export class SkillsComponent implements OnInit {
     isLoading: boolean = false;
-    teste = [
+    skills = [
         {
             "max": 100,
             "current": 80,
@@ -53,6 +53,6 @@ export class SkillsComponent implements OnInit {
 
 
     ngOnInit(): void {
-
+        window.scrollTo(0, 0);
     }
 }

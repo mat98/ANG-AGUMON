@@ -9,7 +9,9 @@ import { Component, OnInit } from "@angular/core";
 export class DetailProjectInitComponent implements OnInit {
     isLoading: boolean = true;
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        window.scrollTo(0, 0);
+    }
 
     loadingChangeImg() {
         this.isLoading = false;
