@@ -36,8 +36,8 @@ export class SendMessageContactContainerComponent {
     }
 
     private sendEmail(): void {
-        try {
-            this._contactService.sendEmail(this.formSendEmail.value).subscribe(async (_) => {
+        this._contactService.sendEmail(this.formSendEmail.value).subscribe({
+            next: (_: any) => {
                 Swal.fire(
                     {
                         icon: "success",
@@ -45,15 +45,17 @@ export class SendMessageContactContainerComponent {
                         confirmButtonColor: '#3085d6',
                     }
                 );
-            })
-        } catch(error) {
-            Swal.fire(
-                {
-                    icon: "error",
-                    text: "Erro ao enviar email",
-                    confirmButtonColor: '#d92121',
-                }
-            );
-        }
+                this.formSendEmail.markAsUntouched();
+            },
+            error: (_: any) => {
+                Swal.fire(
+                    {
+                        icon: "error",
+                        text: "Erro ao enviar email",
+                        confirmButtonColor: '#d92121',
+                    }
+                );
+            }
+        });
     }
 }
