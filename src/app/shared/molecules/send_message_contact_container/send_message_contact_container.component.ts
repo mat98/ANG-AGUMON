@@ -45,9 +45,13 @@ export class SendMessageContactContainerComponent {
                         confirmButtonColor: '#3085d6',
                     }
                 );
+                
                 this.formSendEmail.markAsUntouched();
+                this.formSendEmail.reset();
+                this.formSendEmail.clearValidators();
             },
-            error: (_: any) => {
+            error: (resp: any) => {
+                console.log("resp-error: ", resp)
                 Swal.fire(
                     {
                         icon: "error",
