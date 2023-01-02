@@ -7,7 +7,6 @@ import { HorizontalTimelineComponent } from "src/app/core/components/horizontal-
 import { CoreModule } from 'src/app/core/core.module';
 import { ProfessionalExpBodyComponent } from "./components/professional-exp-body/professional-exp-body.component";
 import { ProfessionalExpComponent } from './professional-exp.component';
-import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 const routes: Routes = [

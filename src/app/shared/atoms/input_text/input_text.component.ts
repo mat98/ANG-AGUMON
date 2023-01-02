@@ -1,5 +1,5 @@
 import { Component, forwardRef, Input, SkipSelf } from '@angular/core';
-import { ControlContainer, ControlValueAccessor, FormGroup, FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlContainer, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'input-text-component',

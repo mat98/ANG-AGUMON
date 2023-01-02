@@ -1,4 +1,4 @@
-import { CertificateItem, CertificateModel } from './certificates.model';
+import { CertificateItem } from './certificates.model';
 import { CertificateService } from './certificates.service';
 import { Component, OnInit } from "@angular/core";
 
