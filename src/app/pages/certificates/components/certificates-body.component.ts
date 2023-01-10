@@ -12,21 +12,27 @@ export class CertificatesBodyComponent implements OnInit {
     isLoading: boolean = false;
     items = [
         {
-            'id': 'dotnet',
+            'id': "dotnet",
             'img': "https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png",
-            'text': 'Dotnet',
+            'text': "Dotnet",
             'enabledDetail': false
         },
         {
-            'id': 'angular',
+            'id': "angular",
             'img': "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png",
-            'text': 'Angular',
+            'text': "Angular",
             'enabledDetail': false
         },
         {
-            'id': 'flutter',
+            'id': "flutter",
             'img': "https://static-00.iconduck.com/assets.00/flutter-icon-413x512-4picx6vy.png",
-            'text': 'Flutter',
+            'text': "Flutter",
+            'enabledDetail': false
+        },
+        {
+            'id': "r3Corda",
+            'img': "https://images2.imgbox.com/30/a1/8nSTUX38_o.png",
+            'text': "R3 Corda",
             'enabledDetail': false
         }
     ]
@@ -110,11 +116,13 @@ export class CertificatesBodyComponent implements OnInit {
                 return { 'filter': 'drop-shadow(0 0 0.9rem #b70029)' }
             case 'flutter':
                 return { 'filter': 'drop-shadow(0 0 0.9rem #45d1fd)' }
+            case 'r3Corda':
+                return { 'filter': 'drop-shadow(0 0 0.9rem #b70029)' }
         }
         return { 'filter': 'drop-shadow(0 0 0.9rem blue)' }
     }
 
-    getCertificatesByRecourse(recourse: string): CertificateItem[]{
+    getCertificatesByRecourse(recourse: string): CertificateItem[] {
         return this.certificateInfo.filter(certified => certified.technology === recourse);
     }
 

@@ -35,6 +35,13 @@
             "technology": "dotnet",
             "educationInstitution": "alura",
             "linkCertified": "https://cursos.alura.com.br/certificate/mateusd-santos10/csharp-parte-2-introducao-orientacao-objetos"
+        },
+        {
+            "name": "Corda Certified Developer",
+            "year": 2022,
+            "technology": "r3Corda",
+            "educationInstitution": "r3Corda",
+            "linkCertified": "https://www.credly.com/badges/04ea0562-826e-45ba-a675-8094ca45d04a/public_url"
         }
     ]
 }
