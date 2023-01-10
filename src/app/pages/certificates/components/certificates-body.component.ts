@@ -57,7 +57,7 @@ export class CertificatesBodyComponent implements OnInit {
             const wrapper = document.body,
                 sections = this.elementRef.nativeElement.querySelectorAll('section'),
                 closeButtons = this.elementRef.nativeElement.querySelectorAll('.close-section'),
-                expandedClass: string = "is-expanded",
+                expandedClass: string = "is-expandeed",
                 hasExpandedClass: string = "has-expanded-item";
 
             const initEvents = () => {

@@ -22,22 +22,6 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
 
         this.years = [...new Set(this.certificateInfo.map(certified => certified.year.toString()))];
         this.years = this.years.sort((a: string, b: string) => a.localeCompare(b));
-        //     case 'nodejs':
-        //         this.color = "#90c53f";
-        //         this.img = "https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png"
-        //         break;
-        //     case 'vuejs':
-        //         this.color = "#399d79";
-        //         this.img = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
-        //         break;
-        //     case 'corda':
-        //         this.color = "#b00027";
-        //         this.img = "https://s3.cointelegraph.com/storage/uploads/view/df72564418f401cce36ff1f3329126cd.png"
-        //         break;
-
-        //     default:
-        //         break;
-        // }
     }
 
     ngAfterViewInit() {
@@ -45,7 +29,7 @@ export class DetailCertificateComponent implements OnInit, AfterViewInit {
             const wrapper = document.body,
                 sections = this.elementRef.nativeElement.querySelectorAll('section'),
                 closeButtons = this.elementRef.nativeElement.querySelectorAll('.close-section'),
-                expandedClass: string = "is-expanded",
+                expandedClass: string = "is-expandeed",
                 hasExpandedClass: string = "has-expanded-item";
 
             const initEvents = () => {
