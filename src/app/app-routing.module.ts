@@ -10,7 +10,8 @@ const routes: Routes = [
       {
         path: '',
         canActivate: [],
-        loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule)
+        loadChildren: () =>
+          import('./pages/home/home.module').then((m) => m.HomeModule),
       },
       {
         path: 'contact-me',
@@ -24,9 +25,9 @@ const routes: Routes = [
         path: 'detail-project',
         canActivate: [],
         loadChildren: () =>
-          import("./pages/detail-project/detail-project.module").then(
+          import('./pages/detail-project/detail-project.module').then(
             (m) => m.DetailProjectModule
-          )
+          ),
       },
       {
         path: 'working-exp',
@@ -40,7 +41,7 @@ const routes: Routes = [
         path: 'certificates',
         canActivate: [],
         loadChildren: () =>
-          import('./pages/certificates/certificates.module').then(
+          import('./certificates/certificates.module').then(
             (m) => m.CertificatesModule
           ),
       },
@@ -48,9 +49,7 @@ const routes: Routes = [
         path: 'skills',
         canActivate: [],
         loadChildren: () =>
-          import('./pages/skills/skills.module').then(
-            (m) => m.SkillsModule
-          ),
+          import('./pages/skills/skills.module').then((m) => m.SkillsModule),
       },
       {
         path: '',
@@ -62,11 +61,11 @@ const routes: Routes = [
       },
     ],
   },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
